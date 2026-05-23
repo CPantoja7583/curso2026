@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Carton</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page create-page">
+    <header class="topbar">
+      <a class="back-link" href="index.html">Menu</a>
+      <a class="action-link small" href="cartones.html">Ver cartones</a>
+    </header>
+
+    <section class="create-panel">
+      <p class="eyebrow">Nuevo carton</p>
+      <h1>Generar una nueva serie</h1>
+      <p class="lead compact">El servidor creara 15 numeros unicos entre 1 y 30, guardara el carton en PostgreSQL y devolvera su numero de serie.</p>
+
+      <button id="create-carton" class="button" type="button">Crear carton</button>
+      <p id="status" class="status">Listo para crear.</p>
+    </section>
+
+    <section id="cartones" class="single-carton" aria-live="polite"></section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    setupCreateCarton();
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS cartones (
+  serie SERIAL PRIMARY KEY,
+  numeros INTEGER[] NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);

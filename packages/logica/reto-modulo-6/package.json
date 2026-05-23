@@ -1,0 +1,13 @@
+{
+  "name": "reto-modulo-6-cartones-kino",
+  "version": "1.0.0",
+  "description": "Servicio web Node con PostgreSQL para administrar cartones estilo KINO",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  }
+}
