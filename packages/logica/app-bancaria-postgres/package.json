@@ -1,0 +1,22 @@
+{
+  "name": "app-bancaria-postgres",
+  "version": "1.0.0",
+  "private": true,
+  "description": "App bancaria v1 con PostgreSQL, JWT, Swagger y frontend accesible",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c green,cyan \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w frontend",
+    "test": "npm run test -w backend",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:logs": "docker compose logs -f db",
+    "db:init": "npm run db:init -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
