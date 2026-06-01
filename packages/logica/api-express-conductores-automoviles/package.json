@@ -1,0 +1,13 @@
+{
+  "name": "api-express-conductores-automoviles",
+  "version": "1.0.0",
+  "description": "API con Express + SQL para conductores y automoviles",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "sql.js": "^1.13.0"
+  }
+}

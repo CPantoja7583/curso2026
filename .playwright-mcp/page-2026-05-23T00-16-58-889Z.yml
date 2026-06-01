@@ -1,0 +1,71 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: BJ
+      - generic [ref=e6]:
+        - paragraph [ref=e7]: Node + JSON
+        - heading "Banco Central de Clientes" [level=1] [ref=e8]
+    - navigation "Navegacion principal" [ref=e9]:
+      - button "Inicio Resumen y accesos directos" [ref=e10] [cursor=pointer]:
+        - generic [ref=e11]: Inicio
+        - text: Resumen y accesos directos
+      - button "Consultar Listados y filtros operativos" [ref=e12] [cursor=pointer]:
+        - generic [ref=e13]: Consultar
+        - text: Listados y filtros operativos
+      - button "Crear cliente Alta con cuenta RUT o ahorro" [ref=e14] [cursor=pointer]:
+        - generic [ref=e15]: Crear cliente
+        - text: Alta con cuenta RUT o ahorro
+      - button "Agregar cuentas Extender clientes existentes" [ref=e16] [cursor=pointer]:
+        - generic [ref=e17]: Agregar cuentas
+        - text: Extender clientes existentes
+      - button "Eliminar Borrado seguro con reglas de negocio" [ref=e18] [cursor=pointer]:
+        - generic [ref=e19]: Eliminar
+        - text: Borrado seguro con reglas de negocio
+    - generic [ref=e20]:
+      - paragraph [ref=e21]: Estado del sistema
+      - paragraph [ref=e22]: Panel interno para ejecutivos. La persistencia se mantiene en archivo JSON y las reglas del negocio siguen activas en backend.
+  - main [ref=e23]:
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - paragraph [ref=e26]: App administrativa
+        - heading "Gestion de clientes y cuentas bancarias" [level=2] [ref=e27]
+      - generic [ref=e30]: Persistencia en JSON activa
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - paragraph [ref=e34]: Inicio
+          - heading "Dashboard operativo" [level=2] [ref=e35]
+        - button "Actualizar resumen" [ref=e36] [cursor=pointer]
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - paragraph [ref=e39]: Vista ejecutiva
+          - heading "Selecciona una tarjeta para ir directo al detalle en Consultar." [level=3] [ref=e40]
+        - img "Panel bancario" [ref=e41]
+      - generic [ref=e42]:
+        - button "Cuentas totales 5 Suma de cuentas RUT y cuentas ahorro." [ref=e43] [cursor=pointer]:
+          - paragraph [ref=e44]: Cuentas totales
+          - strong [ref=e45]: "5"
+          - generic [ref=e46]: Suma de cuentas RUT y cuentas ahorro.
+        - button "Cuenta unica RUT 0 Clientes con RUT y sin ahorro." [ref=e47] [cursor=pointer]:
+          - paragraph [ref=e48]: Cuenta unica RUT
+          - strong [ref=e49]: "0"
+          - generic [ref=e50]: Clientes con RUT y sin ahorro.
+        - button "Cuenta unica ahorro 0 Clientes sin RUT y con ahorro." [ref=e51] [cursor=pointer]:
+          - paragraph [ref=e52]: Cuenta unica ahorro
+          - strong [ref=e53]: "0"
+          - generic [ref=e54]: Clientes sin RUT y con ahorro.
+        - button "RUT + ahorro 2 Clientes que tienen ambos productos." [ref=e55] [cursor=pointer]:
+          - paragraph [ref=e56]: RUT + ahorro
+          - strong [ref=e57]: "2"
+          - generic [ref=e58]: Clientes que tienen ambos productos.
+        - button "Total clientes 2 Vista completa de la cartera actual." [ref=e59] [cursor=pointer]:
+          - paragraph [ref=e60]: Total clientes
+          - strong [ref=e61]: "2"
+          - generic [ref=e62]: Vista completa de la cartera actual.
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - paragraph [ref=e66]: Resultado
+          - heading "Salida de la operacion" [level=2] [ref=e67]
+        - paragraph [ref=e68]: Resumen actualizado correctamente.
+      - generic [ref=e70]: Usa el panel para listar o modificar clientes y cuentas.

@@ -1,0 +1,61 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - paragraph [ref=e4]: Node + pg
+      - heading "CRUD de clientes" [level=1] [ref=e5]
+    - button "Consultar clientes" [ref=e6] [cursor=pointer]
+  - main [ref=e7]:
+    - generic [ref=e8]:
+      - heading "Crear cliente" [level=2] [ref=e9]
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - text: RUT
+          - textbox "RUT" [ref=e12]:
+            - /placeholder: 11.111.111-1
+        - generic [ref=e13]:
+          - text: Nombre
+          - textbox "Nombre" [ref=e14]:
+            - /placeholder: Ana Perez
+        - generic [ref=e15]:
+          - text: Edad
+          - spinbutton "Edad" [ref=e16]
+        - button "Crear" [ref=e17] [cursor=pointer]
+    - generic [ref=e18]:
+      - heading "Modificar nombre" [level=2] [ref=e19]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - text: RUT
+          - textbox "RUT" [ref=e22]:
+            - /placeholder: 22.222.222-2
+        - generic [ref=e23]:
+          - text: Nuevo nombre
+          - textbox "Nuevo nombre" [ref=e24]:
+            - /placeholder: Luis Soto
+        - button "Modificar" [ref=e25] [cursor=pointer]
+    - generic [ref=e26]:
+      - heading "Eliminar cliente" [level=2] [ref=e27]
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - text: RUT
+          - textbox "RUT" [ref=e30]:
+            - /placeholder: 33.333.333-3
+        - button "Eliminar" [ref=e31] [cursor=pointer]
+    - generic [ref=e32]:
+      - generic [ref=e34]:
+        - heading "Consultar clientes" [level=2] [ref=e35]
+        - paragraph [ref=e36]: "Clientes cargados: 2."
+      - table [ref=e38]:
+        - rowgroup [ref=e39]:
+          - row "RUT Nombre Edad" [ref=e40]:
+            - columnheader "RUT" [ref=e41]
+            - columnheader "Nombre" [ref=e42]
+            - columnheader "Edad" [ref=e43]
+        - rowgroup [ref=e44]:
+          - row "11.111.111-1 Ana Perez 31" [ref=e45]:
+            - cell "11.111.111-1" [ref=e46]
+            - cell "Ana Perez" [ref=e47]
+            - cell "31" [ref=e48]
+          - row "22.222.222-2 Luis Soto 24" [ref=e49]:
+            - cell "22.222.222-2" [ref=e50]
+            - cell "Luis Soto" [ref=e51]
+            - cell "24" [ref=e52]

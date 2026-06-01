@@ -1,0 +1,33 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - paragraph [ref=e4]: Ejercicio Práctico - Api Rest n°1
+    - heading "Rick and Morty API" [level=1] [ref=e5]
+    - paragraph [ref=e6]: Consulta de personajes, agrupacion por especie y ficha individual con cache local para evitar llamadas repetidas al endpoint.
+    - generic [ref=e7]:
+      - generic [ref=e8]: Endpoint
+      - code [ref=e9]: https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - button "Mostrar lista" [ref=e12] [cursor=pointer]
+      - button "Agrupar por especie" [ref=e13] [cursor=pointer]
+    - generic [ref=e14]:
+      - generic [ref=e15]: Ficha individual
+      - generic [ref=e16]:
+        - combobox "Ficha individual" [ref=e17]:
+          - option "Rick Sanchez" [selected]
+          - option "Morty Smith"
+          - option "Summer Smith"
+          - option "Beth Smith"
+          - option "Jerry Smith"
+          - option "Abadango Cluster Princess"
+          - option "Abradolf Lincler"
+          - option "Adjudicator Rick"
+          - option "Agency Director"
+          - option "Alan Rails"
+        - button "Ver ficha" [ref=e18] [cursor=pointer]
+    - paragraph [ref=e20]: Sin consultas realizadas.
+  - generic [ref=e21]:
+    - generic [ref=e22]:
+      - heading "Resultado" [level=2] [ref=e23]
+      - paragraph [ref=e24]: La primera consulta obtiene datos desde la API. Las siguientes usan memoria local.
+    - paragraph [ref=e27]: Selecciona una accion para cargar la informacion.

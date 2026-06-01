@@ -1,0 +1,95 @@
+Ejercicio Práctico- Actividad Modelado ER y Normalización
+Actividad Modelado ER y Normalización: Envíos, Retail y Cuentas Bancarias
+Introducción / Objetivo
+
+Actividad  para practicar modelo Entidad–Relación (ER), normalización (hasta 3FN) e implementación en SQL (DDL). Deberás identificar entidades, atributos y relaciones con sus cardinalidades, llevar el diseño a tablas normalizadas y crear los CREATE TABLE con claves primarias y foráneas.
+
+Descripción de la tarea
+
+Sistema de envío de encomiendas
+Diseña el diagrama ER.
+Normaliza las tablas.
+Implementa las tablas en SQL.
+Sistema de venta de productos de retail
+Diseña el diagrama ER.
+Normaliza las tablas.
+Implementa las tablas en SQL.
+Sistema administrador de cuentas bancarias
+Diseña el diagrama ER.
+Normaliza las tablas.
+Implementa las tablas en SQL.
+El desarrollo detallado lo defines tú. Aquí abajo tienes guías básicas (opcionales) para poder orientarte.
+
+Guías y sugerencias técnicas
+
+A. Paso a paso (recomendado)
+
+Identifica entidades y sus atributos clave (PK) y atributos descriptivos.
+Define relaciones y cardinalidades (1–1, 1–N, N–M).
+Lleva N–M a tabla intermedia con PK compuesta o ID propio.
+Normaliza hasta 3FN: elimina dependencias parciales/transitivas, separa atributos multivaluados o compuestos.
+Agrega restricciones: NOT NULL, UNIQUE, CHECK (rango de fechas, montos ≥ 0), y FK con ON DELETE/UPDATE según convenga.
+B. Pistas de entidades (solo orientativas)
+
+Envíos: Cliente, Encomienda, Sucursal, Estado/HistorialEstado, Tarifa.
+Retail: Producto, Categoría, Cliente, Pedido, DetallePedido, Pago.
+Banca: Cliente, Cuenta, Transacción, TipoTransacción.
+C. Plantillas SQL mínimas
+
+-- Tabla simple
+
+CREATE TABLE cliente (
+
+  id_cliente      SERIAL PRIMARY KEY,
+
+  nombre          VARCHAR(100) NOT NULL,
+
+  email           VARCHAR(120) UNIQUE
+
+);
+
+ 
+
+-- Relación 1–N
+
+CREATE TABLE cuenta (
+
+  id_cuenta       SERIAL PRIMARY KEY,
+
+  id_cliente      INT NOT NULL REFERENCES cliente(id_cliente),
+
+  saldo           NUMERIC(12,2) NOT NULL DEFAULT 0 CHECK (saldo >= 0)
+
+);
+
+ 
+
+-- Relación N–M (ejemplo retail: pedido-producto)
+
+CREATE TABLE detalle_pedido (
+
+  id_pedido       INT NOT NULL REFERENCES pedido(id_pedido),
+
+  id_producto     INT NOT NULL REFERENCES producto(id_producto),
+
+  cantidad        INT NOT NULL CHECK (cantidad > 0),
+
+  precio_unitario NUMERIC(12,2) NOT NULL CHECK (precio_unitario >= 0),
+
+  PRIMARY KEY (id_pedido, id_producto)
+
+);
+
+D. Buenas prácticas rápidas
+
+Nombres en singular, snake_case: id_cliente, fecha_creacion.
+Usa tipos adecuados: INT/BIGINT, NUMERIC(12,2), DATE/TIMESTAMP.
+Añade índices en FKs o columnas muy consultadas.
+Documenta con comentarios -- y separa secciones: -- DDL, -- INSERT, -- CONSULTAS.
+Forma de entrega
+
+Sube un .zip con:
+
+Diagramas ER (PNG/PDF) de cada sistema.
+Script .sql con DDL (tablas, FKs, restricciones) para los tres modelos.
+(Opcional) Algunos INSERT de prueba y SELECT de verificación (JOIN básicos).

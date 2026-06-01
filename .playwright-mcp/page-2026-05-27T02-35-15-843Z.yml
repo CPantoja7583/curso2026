@@ -1,0 +1,32 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "Menu" [ref=e3] [cursor=pointer]:
+      - /url: index.html
+    - heading "Productos" [level=1] [ref=e4]
+    - button "Recargar" [ref=e5] [cursor=pointer]
+  - main [ref=e6]:
+    - paragraph [ref=e7]: "Productos cargados: 3."
+    - table [ref=e9]:
+      - rowgroup [ref=e10]:
+        - row "ID Producto Precio Stock" [ref=e11]:
+          - columnheader "ID" [ref=e12]
+          - columnheader "Producto" [ref=e13]
+          - columnheader "Precio" [ref=e14]
+          - columnheader "Stock" [ref=e15]
+      - rowgroup [ref=e16]:
+        - row "1 Teclado mecanico $35.000 8" [ref=e17]:
+          - cell "1" [ref=e18]
+          - cell "Teclado mecanico" [ref=e19]
+          - cell "$35.000" [ref=e20]
+          - cell "8" [ref=e21]
+        - row "2 Mouse optico $12.000 15" [ref=e22]:
+          - cell "2" [ref=e23]
+          - cell "Mouse optico" [ref=e24]
+          - cell "$12.000" [ref=e25]
+          - cell "15" [ref=e26]
+        - row "3 Monitor 24 pulgadas $140.000 4" [ref=e27]:
+          - cell "3" [ref=e28]
+          - cell "Monitor 24 pulgadas" [ref=e29]
+          - cell "$140.000" [ref=e30]
+          - cell "4" [ref=e31]
+    - generic [ref=e32]: "{ \"ok\": true, \"data\": [ { \"id_producto\": 1, \"nombre\": \"Teclado mecanico\", \"precio\": 35000, \"stock\": 8 }, { \"id_producto\": 2, \"nombre\": \"Mouse optico\", \"precio\": 12000, \"stock\": 15 }, { \"id_producto\": 3, \"nombre\": \"Monitor 24 pulgadas\", \"precio\": 140000, \"stock\": 4 } ] }"

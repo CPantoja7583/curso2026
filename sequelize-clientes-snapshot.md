@@ -1,0 +1,27 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - paragraph [ref=e4]: Express + Sequelize
+      - heading "Clientes" [level=1] [ref=e5]
+    - button "Listar clientes" [ref=e6] [cursor=pointer]
+  - main [ref=e7]:
+    - generic [ref=e8]:
+      - heading "Agregar cliente" [level=2] [ref=e9]
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - text: Nombre
+          - textbox "Nombre" [ref=e12]:
+            - /placeholder: Ana Perez
+        - generic [ref=e13]:
+          - text: Email
+          - textbox "Email" [ref=e14]:
+            - /placeholder: ana@example.com
+        - button "Agregar" [active] [ref=e15] [cursor=pointer]
+    - generic [ref=e16]:
+      - heading "Lista de clientes" [level=2] [ref=e17]
+      - paragraph [ref=e18]: Clientes cargados.
+      - list [ref=e21]:
+        - listitem [ref=e24]: Ana Perez - ana@example.com
+        - listitem [ref=e25]: Luis Soto - luis@example.com
+      - heading "Respuesta JSON" [level=3] [ref=e19]
+      - generic [ref=e20]: "{ \"status\": 200, \"ok\": true, \"data\": [ { \"id\": 1, \"nombre\": \"Ana Perez\", \"email\": \"ana@example.com\" }, { \"id\": 2, \"nombre\": \"Luis Soto\", \"email\": \"luis@example.com\" } ] }"

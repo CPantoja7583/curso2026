@@ -1,0 +1,9 @@
+{
+  "name": "servidor-json-productos",
+  "version": "1.0.0",
+  "description": "Servidor web en Node JSON y cliente REST para gestion de productos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

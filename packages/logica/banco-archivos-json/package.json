@@ -1,0 +1,10 @@
+{
+  "name": "banco-archivos-json",
+  "version": "1.0.0",
+  "description": "Servidor Node y frontend para gestion de clientes y cuentas en JSON",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}

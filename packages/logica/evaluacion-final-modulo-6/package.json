@@ -1,0 +1,10 @@
+{
+  "name": "evaluacion-final-modulo-6-mascotas",
+  "version": "1.0.0",
+  "description": "Registro civil de mascotas con Node, JSON y frontend con Axios",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,28 @@
+<h1>Lista de mascotas</h1>
+
+{{#if mascotas.length}}
+  <table class="tabla">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombres</th>
+        <th>Raza</th>
+        <th>Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each mascotas}}
+        <tr>
+          <td>{{id}}</td>
+          <td>{{nombres}}</td>
+          <td>{{raza}}</td>
+          <td>{{edad}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{else}}
+    <p>No hay mascotas registradas todavía.</p>
+  {{/if}}
+
+<a href="/personas/nuevo" class="boton">+ Agregar persona</a>

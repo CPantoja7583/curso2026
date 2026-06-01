@@ -1,0 +1,243 @@
+- generic [active] [ref=e1]:
+  - img
+  - generic [ref=e3]:
+    - generic [ref=e6]:
+      - img [ref=e8]
+      - generic [ref=e43]:
+        - textbox [ref=e44]
+        - button "Explore" [ref=e45] [cursor=pointer]
+      - button [ref=e47] [cursor=pointer]:
+        - img [ref=e48]
+    - generic [ref=e50]:
+      - generic:
+        - img
+      - generic [ref=e51]:
+        - generic [ref=e55]:
+          - heading "Aurora Bank API 1.0.0 OAS 3.0" [level=1] [ref=e57]:
+            - text: Aurora Bank API
+            - generic [ref=e58]:
+              - generic [ref=e60]: 1.0.0
+              - generic [ref=e62]: OAS 3.0
+          - paragraph [ref=e65]: API bancaria v1 con JWT, refresh token, transferencias y endpoints administrativos.
+        - generic [ref=e67]:
+          - generic [ref=e69]:
+            - text: Servers
+            - combobox [ref=e72]:
+              - option "http://127.0.0.1:4000 - Servidor local" [selected]
+          - button "Authorize" [ref=e74] [cursor=pointer]:
+            - generic [ref=e75]: Authorize
+            - img [ref=e76]
+        - generic [ref=e80]:
+          - generic [ref=e82]:
+            - heading "Auth Collapse operation" [level=3] [ref=e83] [cursor=pointer]:
+              - link "Auth" [ref=e84]:
+                - /url: "#/Auth"
+              - button "Collapse operation" [expanded] [ref=e85]:
+                - img [ref=e86]
+            - generic [ref=e89]:
+              - generic [ref=e92] [cursor=pointer]:
+                - button "POST /auth/register Registrar usuario" [ref=e93]:
+                  - generic [ref=e94]: POST
+                  - generic [ref=e95]:
+                    - link "/auth/register" [ref=e97]:
+                      - /url: "#/Auth/post_auth_register"
+                      - generic [ref=e98]:
+                        - text: /auth
+                        - text: /register
+                    - generic [ref=e99]: Registrar usuario
+                - generic "Copy to clipboard"
+                - button "post /auth/register" [ref=e102]:
+                  - img [ref=e103]
+              - generic [ref=e107] [cursor=pointer]:
+                - button "POST /auth/login Iniciar sesion" [ref=e108]:
+                  - generic [ref=e109]: POST
+                  - generic [ref=e110]:
+                    - link "/auth/login" [ref=e112]:
+                      - /url: "#/Auth/post_auth_login"
+                      - generic [ref=e113]:
+                        - text: /auth
+                        - text: /login
+                    - generic [ref=e114]: Iniciar sesion
+                - generic "Copy to clipboard"
+                - button "post /auth/login" [ref=e117]:
+                  - img [ref=e118]
+              - generic [ref=e122] [cursor=pointer]:
+                - button "POST /auth/refresh Renovar sesion" [ref=e123]:
+                  - generic [ref=e124]: POST
+                  - generic [ref=e125]:
+                    - link "/auth/refresh" [ref=e127]:
+                      - /url: "#/Auth/post_auth_refresh"
+                      - generic [ref=e128]:
+                        - text: /auth
+                        - text: /refresh
+                    - generic [ref=e129]: Renovar sesion
+                - generic "Copy to clipboard"
+                - button "post /auth/refresh" [ref=e132]:
+                  - img [ref=e133]
+              - generic [ref=e137] [cursor=pointer]:
+                - button "POST /auth/logout Cerrar sesion" [ref=e138]:
+                  - generic [ref=e139]: POST
+                  - generic [ref=e140]:
+                    - link "/auth/logout" [ref=e142]:
+                      - /url: "#/Auth/post_auth_logout"
+                      - generic [ref=e143]:
+                        - text: /auth
+                        - text: /logout
+                    - generic [ref=e144]: Cerrar sesion
+                - generic "Copy to clipboard"
+                - button "post /auth/logout" [ref=e147]:
+                  - img [ref=e148]
+          - generic [ref=e151]:
+            - heading "Me Collapse operation" [level=3] [ref=e152] [cursor=pointer]:
+              - link "Me" [ref=e153]:
+                - /url: "#/Me"
+              - button "Collapse operation" [expanded] [ref=e154]:
+                - img [ref=e155]
+            - generic [ref=e158]:
+              - generic [ref=e161] [cursor=pointer]:
+                - button "GET /me Perfil del usuario autenticado" [ref=e162]:
+                  - generic [ref=e163]: GET
+                  - generic [ref=e164]:
+                    - link "/me" [ref=e166]:
+                      - /url: "#/Me/get_me"
+                    - generic [ref=e167]: Perfil del usuario autenticado
+                - generic "Copy to clipboard"
+                - button "authorization button unlocked" [ref=e170]:
+                  - img [ref=e171]
+                - button "get /me" [ref=e173]:
+                  - img [ref=e174]
+              - generic [ref=e178] [cursor=pointer]:
+                - button "GET /me/account Cuenta principal del usuario" [ref=e179]:
+                  - generic [ref=e180]: GET
+                  - generic [ref=e181]:
+                    - link "/me/account" [ref=e183]:
+                      - /url: "#/Me/get_me_account"
+                      - generic [ref=e184]:
+                        - text: /me
+                        - text: /account
+                    - generic [ref=e185]: Cuenta principal del usuario
+                - generic "Copy to clipboard"
+                - button "authorization button unlocked" [ref=e188]:
+                  - img [ref=e189]
+                - button "get /me/account" [ref=e191]:
+                  - img [ref=e192]
+          - generic [ref=e195]:
+            - heading "Transfers Collapse operation" [level=3] [ref=e196] [cursor=pointer]:
+              - link "Transfers" [ref=e197]:
+                - /url: "#/Transfers"
+              - button "Collapse operation" [expanded] [ref=e198]:
+                - img [ref=e199]
+            - generic [ref=e202]:
+              - generic [ref=e205] [cursor=pointer]:
+                - button "GET /me/transfers Historial de transferencias del usuario" [ref=e206]:
+                  - generic [ref=e207]: GET
+                  - generic [ref=e208]:
+                    - link "/me/transfers" [ref=e210]:
+                      - /url: "#/Transfers/get_me_transfers"
+                      - generic [ref=e211]:
+                        - text: /me
+                        - text: /transfers
+                    - generic [ref=e212]: Historial de transferencias del usuario
+                - generic "Copy to clipboard"
+                - button "authorization button unlocked" [ref=e215]:
+                  - img [ref=e216]
+                - button "get /me/transfers" [ref=e218]:
+                  - img [ref=e219]
+              - generic [ref=e223] [cursor=pointer]:
+                - button "POST /transfers Crear transferencia" [ref=e224]:
+                  - generic [ref=e225]: POST
+                  - generic [ref=e226]:
+                    - link "/transfers" [ref=e228]:
+                      - /url: "#/Transfers/post_transfers"
+                    - generic [ref=e229]: Crear transferencia
+                - generic "Copy to clipboard"
+                - button "authorization button unlocked" [ref=e232]:
+                  - img [ref=e233]
+                - button "post /transfers" [ref=e235]:
+                  - img [ref=e236]
+          - generic [ref=e239]:
+            - heading "Admin Collapse operation" [level=3] [ref=e240] [cursor=pointer]:
+              - link "Admin" [ref=e241]:
+                - /url: "#/Admin"
+              - button "Collapse operation" [expanded] [ref=e242]:
+                - img [ref=e243]
+            - generic [ref=e246]:
+              - generic [ref=e249] [cursor=pointer]:
+                - button "GET /admin/users Listado de usuarios" [ref=e250]:
+                  - generic [ref=e251]: GET
+                  - generic [ref=e252]:
+                    - link "/admin/users" [ref=e254]:
+                      - /url: "#/Admin/get_admin_users"
+                      - generic [ref=e255]:
+                        - text: /admin
+                        - text: /users
+                    - generic [ref=e256]: Listado de usuarios
+                - generic "Copy to clipboard"
+                - button "authorization button unlocked" [ref=e259]:
+                  - img [ref=e260]
+                - button "get /admin/users" [ref=e262]:
+                  - img [ref=e263]
+              - generic [ref=e267] [cursor=pointer]:
+                - 'button "PATCH /admin/users/{id}/status Activar o bloquear usuario" [ref=e268]':
+                  - generic [ref=e269]: PATCH
+                  - generic [ref=e270]:
+                    - 'link "/admin/users/{id}/status" [ref=e272]':
+                      - /url: "#/Admin/patch_admin_users__id__status"
+                      - generic [ref=e273]:
+                        - text: /admin
+                        - text: /users
+                        - text: "/{id}"
+                        - text: /status
+                    - generic [ref=e274]: Activar o bloquear usuario
+                - generic "Copy to clipboard"
+                - button "authorization button unlocked" [ref=e277]:
+                  - img [ref=e278]
+                - 'button "patch /admin/users/{id}/status" [ref=e280]':
+                  - img [ref=e281]
+              - generic [ref=e285] [cursor=pointer]:
+                - button "GET /admin/transfers Listado global de transferencias" [ref=e286]:
+                  - generic [ref=e287]: GET
+                  - generic [ref=e288]:
+                    - link "/admin/transfers" [ref=e290]:
+                      - /url: "#/Admin/get_admin_transfers"
+                      - generic [ref=e291]:
+                        - text: /admin
+                        - text: /transfers
+                    - generic [ref=e292]: Listado global de transferencias
+                - generic "Copy to clipboard"
+                - button "authorization button unlocked" [ref=e295]:
+                  - img [ref=e296]
+                - button "get /admin/transfers" [ref=e298]:
+                  - img [ref=e299]
+          - generic [ref=e302]:
+            - heading "default Collapse operation" [level=3] [ref=e303] [cursor=pointer]:
+              - link "default" [ref=e304]:
+                - /url: "#/default"
+              - button "Collapse operation" [expanded] [ref=e305]:
+                - img [ref=e306]
+            - generic [ref=e312] [cursor=pointer]:
+              - button "GET /health Estado del backend" [ref=e313]:
+                - generic [ref=e314]: GET
+                - generic [ref=e315]:
+                  - link "/health" [ref=e317]:
+                    - /url: "#/default/get_health"
+                  - generic [ref=e318]: Estado del backend
+              - generic "Copy to clipboard"
+              - button "get /health" [ref=e321]:
+                - img [ref=e322]
+        - generic [ref=e326]:
+          - heading "Schemas" [level=4] [ref=e327] [cursor=pointer]:
+            - button "Schemas" [expanded] [ref=e328]:
+              - generic [ref=e329]: Schemas
+              - img [ref=e330]
+          - generic [ref=e332]:
+            - button "Error" [ref=e335] [cursor=pointer]:
+              - generic [ref=e337]: Error
+            - button "Session" [ref=e341] [cursor=pointer]:
+              - generic [ref=e343]: Session
+            - button "User" [ref=e347] [cursor=pointer]:
+              - generic [ref=e349]: User
+            - button "Account" [ref=e353] [cursor=pointer]:
+              - generic [ref=e355]: Account
+            - button "Transfer" [ref=e359] [cursor=pointer]:
+              - generic [ref=e361]: Transfer

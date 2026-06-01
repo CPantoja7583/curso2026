@@ -1,0 +1,79 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - paragraph [ref=e4]: Node + pg
+      - heading "CRUD parametrizado" [level=1] [ref=e5]
+    - button "Listar todos" [ref=e6] [cursor=pointer]
+  - main [ref=e7]:
+    - generic [ref=e8]:
+      - heading "Crear cliente" [level=2] [ref=e9]
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - text: RUT
+          - textbox "RUT" [ref=e12]:
+            - /placeholder: 55.555.555-5
+        - generic [ref=e13]:
+          - text: Nombre
+          - textbox "Nombre" [ref=e14]:
+            - /placeholder: Elena Castro
+        - generic [ref=e15]:
+          - text: Edad
+          - spinbutton "Edad" [ref=e16]
+        - button "Crear" [ref=e17] [cursor=pointer]
+    - generic [ref=e18]:
+      - heading "Consultar" [level=2] [ref=e19]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - text: Criterio
+          - combobox "Criterio" [ref=e22]:
+            - option "Todos"
+            - option "RUT" [selected]
+            - option "Nombre o prefijo"
+            - option "Edad exacta"
+        - generic [ref=e23]:
+          - text: Valor
+          - textbox "Valor" [ref=e24]:
+            - /placeholder: Ana, 31 o 11.111.111-1
+            - text: 99.999.999-9
+        - button "Buscar" [active] [ref=e25] [cursor=pointer]
+    - generic [ref=e26]:
+      - heading "Modificar nombre" [level=2] [ref=e27]
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - text: RUT
+          - textbox "RUT" [ref=e30]:
+            - /placeholder: 22.222.222-2
+        - generic [ref=e31]:
+          - text: Nuevo nombre
+          - textbox "Nuevo nombre" [ref=e32]:
+            - /placeholder: Luis Soto actualizado
+        - button "Actualizar" [ref=e33] [cursor=pointer]
+    - generic [ref=e34]:
+      - heading "Eliminar" [level=2] [ref=e35]
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - text: Criterio
+          - combobox "Criterio" [ref=e38]:
+            - option "RUT" [selected]
+            - option "Nombre o prefijo"
+            - option "Edad exacta"
+        - generic [ref=e39]:
+          - text: Valor
+          - textbox "Valor" [ref=e40]:
+            - /placeholder: 33.333.333-3
+        - button "Eliminar" [ref=e41] [cursor=pointer]
+    - generic [ref=e42]:
+      - generic [ref=e44]:
+        - heading "Resultados" [level=2] [ref=e45]
+        - paragraph [ref=e46]: Cliente no existe
+      - table [ref=e48]:
+        - rowgroup [ref=e49]:
+          - row "RUT Nombre Edad" [ref=e50]:
+            - columnheader "RUT" [ref=e51]
+            - columnheader "Nombre" [ref=e52]
+            - columnheader "Edad" [ref=e53]
+        - rowgroup [ref=e54]:
+          - row "Sin resultados." [ref=e78]:
+            - cell "Sin resultados." [ref=e79]
+      - heading "Respuesta JSON" [level=3] [ref=e63]
+      - generic [ref=e64]: "{ \"status\": 404, \"ok\": false, \"mensaje\": \"Cliente no existe\" }"

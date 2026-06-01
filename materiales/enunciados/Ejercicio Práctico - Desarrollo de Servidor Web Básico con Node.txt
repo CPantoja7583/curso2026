@@ -1,0 +1,29 @@
+
+Ejercicio Práctico - Desarrollo de Servidor Web Básico con Node.js
+Actividad- Desarrollo de Servidor Web Básico con Node.js
+Introducción / Objetivo
+
+Actividad breve para implementar un servidor web en Node.js que gestione peticiones HTTP, genere HTML dinámico y diferencie la lógica para GET y PUT, entregando además una respuesta estándar para métodos no implementados. El enfoque es evidenciar enrutamiento básico, conformación de respuestas y manejo de cabeceras según el método solicitado.
+
+Descripción de la actividad
+
+Instrucciones :
+Se requiere el desarrollo de un servidor web utilizando Node.js que demuestre la capacidad de gestionar peticiones HTTP, generar respuestas dinámicas en formato HTML y manejar la lógica específica para los métodos GET y PUT, además de gestionar métodos no implementados.
+
+Objetivos Principales
+
+Servidor de Información Temporal (GET Único): Crear un endpoint que sirva una página HTML dinámica que muestre la fecha y hora actual del servidor con un formato específico.
+Servidor de Lógica de Métodos (GET/PUT): Implementar la gestión de los métodos HTTP GET y PUT en un endpoint diferente, generando respuestas aleatorias.
+Manejo de Métodos No Soportados: Implementar una respuesta estándar para cualquier otro método HTTP no explícitamente definido.
+Requisitos
+
+Servidor de Fecha y Hora (Endpoint Principal)
+Responder a GET en el endpoint principal (/ o el que se defina) con Content-Type: text/html e incluir:
+Día (nombre), Número de día, Mes (número), Año, Hora (24h), Minutos, Segundos (valores del momento de la solicitud).
+Servidor de Respuestas Aleatorias (Endpoint Secundario, p. ej. /random-data)
+GET: responder con una palabra aleatoria de 3 a 10 letras (HTML, Content-Type: text/html).
+PUT: responder con un número entero aleatorio en el rango 10 a 50.000 (HTML, Content-Type: text/html).
+Otros Métodos HTTP
+Ante POST, DELETE, PATCH, HEAD, etc. en el endpoint de respuestas aleatorias, responder en texto plano (Content-Type: text/plain) con:
+“Aún no estoy preparado para responder al método X”
+donde X es el método recibido (ej.: “…POST”).

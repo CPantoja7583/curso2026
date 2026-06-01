@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="index.html">Menu</a>
+      <h1>Productos</h1>
+      <button id="loadProducts">Recargar</button>
+    </header>
+    <main class="panel">
+      <p id="message" class="message"></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Stock</th>
+            </tr>
+          </thead>
+          <tbody id="productsBody"></tbody>
+        </table>
+      </div>
+      <pre id="jsonBox">{}</pre>
+    </main>
+    <script src="productos.js"></script>
+  </body>
+</html>

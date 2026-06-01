@@ -1,0 +1,143 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - paragraph [ref=e4]: API REST N°1
+    - heading "Rick and Morty API" [level=1] [ref=e5]
+    - paragraph [ref=e6]: Consulta de personajes, agrupacion por especie y ficha individual con cache local para evitar llamadas repetidas al endpoint.
+    - generic [ref=e7]:
+      - generic [ref=e8]: Endpoint
+      - code [ref=e9]: https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - button "Mostrar lista" [active] [ref=e12] [cursor=pointer]
+      - button "Agrupar por especie" [ref=e13] [cursor=pointer]
+    - generic [ref=e14]:
+      - generic [ref=e15]: Ficha individual
+      - generic [ref=e16]:
+        - combobox "Ficha individual" [ref=e17]:
+          - option "Rick Sanchez" [selected]
+          - option "Morty Smith"
+          - option "Summer Smith"
+          - option "Beth Smith"
+          - option "Jerry Smith"
+          - option "Abadango Cluster Princess"
+          - option "Abradolf Lincler"
+          - option "Adjudicator Rick"
+          - option "Agency Director"
+          - option "Alan Rails"
+        - button "Ver ficha" [ref=e18] [cursor=pointer]
+    - paragraph [ref=e20]: Datos obtenidos desde la API.
+  - generic [ref=e21]:
+    - generic [ref=e22]:
+      - heading "Resultado" [level=2] [ref=e23]
+      - paragraph [ref=e24]: La primera consulta obtiene datos desde la API. Las siguientes usan memoria local.
+    - generic [ref=e28]:
+      - article [ref=e29]:
+        - img "Rick Sanchez" [ref=e30]
+        - generic [ref=e31]:
+          - heading "Rick Sanchez" [level=3] [ref=e32]
+          - generic [ref=e33]:
+            - generic [ref=e34]:
+              - strong [ref=e35]: "ID:"
+              - text: "1"
+            - generic [ref=e36]:
+              - strong [ref=e37]: "Especie:"
+              - text: Human
+      - article [ref=e38]:
+        - img "Morty Smith" [ref=e39]
+        - generic [ref=e40]:
+          - heading "Morty Smith" [level=3] [ref=e41]
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - strong [ref=e44]: "ID:"
+              - text: "2"
+            - generic [ref=e45]:
+              - strong [ref=e46]: "Especie:"
+              - text: Human
+      - article [ref=e47]:
+        - img "Summer Smith" [ref=e48]
+        - generic [ref=e49]:
+          - heading "Summer Smith" [level=3] [ref=e50]
+          - generic [ref=e51]:
+            - generic [ref=e52]:
+              - strong [ref=e53]: "ID:"
+              - text: "3"
+            - generic [ref=e54]:
+              - strong [ref=e55]: "Especie:"
+              - text: Human
+      - article [ref=e56]:
+        - img "Beth Smith" [ref=e57]
+        - generic [ref=e58]:
+          - heading "Beth Smith" [level=3] [ref=e59]
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - strong [ref=e62]: "ID:"
+              - text: "4"
+            - generic [ref=e63]:
+              - strong [ref=e64]: "Especie:"
+              - text: Human
+      - article [ref=e65]:
+        - img "Jerry Smith" [ref=e66]
+        - generic [ref=e67]:
+          - heading "Jerry Smith" [level=3] [ref=e68]
+          - generic [ref=e69]:
+            - generic [ref=e70]:
+              - strong [ref=e71]: "ID:"
+              - text: "5"
+            - generic [ref=e72]:
+              - strong [ref=e73]: "Especie:"
+              - text: Human
+      - article [ref=e74]:
+        - img "Abadango Cluster Princess" [ref=e75]
+        - generic [ref=e76]:
+          - heading "Abadango Cluster Princess" [level=3] [ref=e77]
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - strong [ref=e80]: "ID:"
+              - text: "6"
+            - generic [ref=e81]:
+              - strong [ref=e82]: "Especie:"
+              - text: Alien
+      - article [ref=e83]:
+        - img "Abradolf Lincler" [ref=e84]
+        - generic [ref=e85]:
+          - heading "Abradolf Lincler" [level=3] [ref=e86]
+          - generic [ref=e87]:
+            - generic [ref=e88]:
+              - strong [ref=e89]: "ID:"
+              - text: "7"
+            - generic [ref=e90]:
+              - strong [ref=e91]: "Especie:"
+              - text: Human
+      - article [ref=e92]:
+        - img "Adjudicator Rick" [ref=e93]
+        - generic [ref=e94]:
+          - heading "Adjudicator Rick" [level=3] [ref=e95]
+          - generic [ref=e96]:
+            - generic [ref=e97]:
+              - strong [ref=e98]: "ID:"
+              - text: "8"
+            - generic [ref=e99]:
+              - strong [ref=e100]: "Especie:"
+              - text: Human
+      - article [ref=e101]:
+        - img "Agency Director" [ref=e102]
+        - generic [ref=e103]:
+          - heading "Agency Director" [level=3] [ref=e104]
+          - generic [ref=e105]:
+            - generic [ref=e106]:
+              - strong [ref=e107]: "ID:"
+              - text: "9"
+            - generic [ref=e108]:
+              - strong [ref=e109]: "Especie:"
+              - text: Human
+      - article [ref=e110]:
+        - img "Alan Rails" [ref=e111]
+        - generic [ref=e112]:
+          - heading "Alan Rails" [level=3] [ref=e113]
+          - generic [ref=e114]:
+            - generic [ref=e115]:
+              - strong [ref=e116]: "ID:"
+              - text: "10"
+            - generic [ref=e117]:
+              - strong [ref=e118]: "Especie:"
+              - text: Human

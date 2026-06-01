@@ -1,0 +1,65 @@
+- generic [ref=e2]:
+  - link "Saltar al contenido principal" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - link "A Aurora Bank PostgreSQL Banking Lab" [ref=e6] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e7]: A
+        - generic [ref=e8]:
+          - strong [ref=e9]: Aurora Bank
+          - generic [ref=e10]: PostgreSQL Banking Lab
+      - navigation "Navegacion principal" [ref=e11]:
+        - link "Inicio" [ref=e12] [cursor=pointer]:
+          - /url: "#/"
+        - link "Beneficios" [ref=e13] [cursor=pointer]:
+          - /url: "#/beneficios"
+        - link "Seguridad" [ref=e14] [cursor=pointer]:
+          - /url: "#/seguridad"
+        - link "FAQ" [ref=e15] [cursor=pointer]:
+          - /url: "#/faq"
+        - link "Contacto" [ref=e16] [cursor=pointer]:
+          - /url: "#/contacto"
+      - generic [ref=e17]:
+        - link "Ingresar" [ref=e18] [cursor=pointer]:
+          - /url: "#/login"
+        - link "Crear cuenta" [ref=e19] [cursor=pointer]:
+          - /url: "#/registro"
+    - main [active] [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - paragraph [ref=e23]: Banco digital educativo
+          - heading "Una experiencia bancaria clara, segura y lista para demostrar PostgreSQL de verdad." [level=1] [ref=e24]
+          - paragraph [ref=e25]: Aurora Bank combina sitio publico, paneles privados, transferencias reales y documentacion OpenAPI en una sola experiencia cuidada.
+          - generic [ref=e26]:
+            - link "Crear cuenta" [ref=e27] [cursor=pointer]:
+              - /url: "#/registro"
+            - link "Ingresar ahora" [ref=e28] [cursor=pointer]:
+              - /url: "#/login"
+        - generic [ref=e29]:
+          - article [ref=e30]:
+            - generic [ref=e31]: Arquitectura
+            - strong [ref=e32]: Frontend + API
+          - article [ref=e33]:
+            - generic [ref=e34]: Base de datos
+            - strong [ref=e35]: PostgreSQL
+          - article [ref=e36]:
+            - generic [ref=e37]: Seguridad
+            - strong [ref=e38]: JWT + refresh
+      - generic [ref=e39]:
+        - article [ref=e40]:
+          - paragraph [ref=e41]: Usuarios
+          - heading "Panel privado para operar con tu cuenta principal" [level=2] [ref=e42]
+          - paragraph [ref=e43]: Consulta saldo, revisa movimientos y realiza transferencias entre clientes registrados.
+        - article [ref=e44]:
+          - paragraph [ref=e45]: Admin
+          - heading "Gobierno operacional simple y defendible" [level=2] [ref=e46]
+          - paragraph [ref=e47]: El administrador puede revisar usuarios, ver transferencias y bloquear o activar cuentas.
+        - article [ref=e48]:
+          - paragraph [ref=e49]: OpenAPI
+          - heading "Documentacion lista para demo tecnica" [level=2] [ref=e50]
+          - paragraph [ref=e51]: La API expone Swagger para que puedas mostrar contratos, payloads y respuestas sin humo.
+    - contentinfo [ref=e52]:
+      - paragraph [ref=e53]: Aurora Bank v1. Proyecto academico con OpenAPI, JWT y accesibilidad practica.
+      - link "Ver Swagger" [ref=e54] [cursor=pointer]:
+        - /url: http://127.0.0.1:4000/docs

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clientes con Sequelize</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Express + Sequelize</p>
+        <h1>Clientes</h1>
+      </div>
+      <button id="listar" type="button">Listar clientes</button>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Agregar cliente</h2>
+        <form id="form" class="form">
+          <label>
+            Nombre
+            <input name="nombre" placeholder="Ana Perez" required />
+          </label>
+          <label>
+            Email
+            <input name="email" placeholder="ana@example.com" type="email" required />
+          </label>
+          <button type="submit">Agregar</button>
+        </form>
+      </section>
+
+      <section class="panel results">
+        <h2>Lista de clientes</h2>
+        <p id="mensaje" class="message">Presiona listar para cargar registros.</p>
+        <ul id="lista" class="client-list"></ul>
+        <h3>Respuesta JSON</h3>
+        <pre id="jsonBox">{}</pre>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

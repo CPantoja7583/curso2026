@@ -1,0 +1,85 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - article [ref=e4]:
+      - generic [ref=e5]: Repositorio Ordenado
+      - heading "JavaScript 2026" [level=1] [ref=e6]
+      - paragraph [ref=e7]: El proyecto ahora esta separado por packages para distinguir la logica del curso, los ejercicios SQL y los materiales de apoyo.
+      - generic [ref=e8]:
+        - generic [ref=e9]: packages/logica
+        - generic [ref=e10]: packages/base-de-datos
+        - generic [ref=e11]: materiales
+    - complementary [ref=e12]:
+      - generic [ref=e13]:
+        - heading "Nueva estructura" [level=2] [ref=e14]
+        - paragraph [ref=e15]: La raiz queda liviana y las entregas se agrupan por tipo de trabajo. Asi es mas facil encontrar proyectos, consultas SQL y enunciados.
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - strong [ref=e18]: Logica
+          - text: HTML, CSS y JavaScript de ejercicios, actividades y mini proyectos.
+        - generic [ref=e19]:
+          - strong [ref=e20]: Base de datos
+          - text: Scripts SQL y tareas relacionadas a modelado y consultas.
+        - generic [ref=e21]:
+          - strong [ref=e22]: Materiales
+          - text: Enunciados, PDFs y documentos del curso.
+  - region "Accesos principales" [ref=e23]:
+    - 'link "Package Logica Acceso a `Curso`, `EP2`, `Portafolio` y `actividad4` con sus archivos web. Entrar" [ref=e24] [cursor=pointer]':
+      - /url: ./packages/logica/index.html
+      - generic [ref=e25]: Package
+      - heading "Logica" [level=3] [ref=e26]
+      - paragraph [ref=e27]: "Acceso a `Curso`, `EP2`, `Portafolio` y `actividad4` con sus archivos web."
+      - generic [ref=e28]: Entrar
+    - link "Package Base de datos Scripts SQL separados del resto del trabajo para que queden ubicables. Entrar" [ref=e29] [cursor=pointer]:
+      - /url: ./packages/base-de-datos/index.html
+      - generic [ref=e30]: Package
+      - heading "Base de datos" [level=3] [ref=e31]
+      - paragraph [ref=e32]: Scripts SQL separados del resto del trabajo para que queden ubicables.
+      - generic [ref=e33]: Entrar
+    - link "Material Materiales Enunciados en texto y PDFs del curso reunidos en un solo lugar. Entrar" [ref=e34] [cursor=pointer]:
+      - /url: ./materiales/index.html
+      - generic [ref=e35]: Material
+      - heading "Materiales" [level=3] [ref=e36]
+      - paragraph [ref=e37]: Enunciados en texto y PDFs del curso reunidos en un solo lugar.
+      - generic [ref=e38]: Entrar
+    - link "Entrega API REST N°1 Acceso directo al ejercicio de Rick and Morty ya implementado. Abrir" [ref=e39] [cursor=pointer]:
+      - /url: ./packages/logica/EP2/Ejercicio%20Pr%C3%A1ctico%20-%20Api%20Rest%20n%C2%B01.html
+      - generic [ref=e40]: Entrega
+      - heading "API REST N°1" [level=3] [ref=e41]
+      - paragraph [ref=e42]: Acceso directo al ejercicio de Rick and Morty ya implementado.
+      - generic [ref=e43]: Abrir
+  - region "Accesos rapidos" [ref=e44]:
+    - heading "Accesos rapidos" [level=2] [ref=e45]
+    - generic [ref=e46]:
+      - link "Tarea 0" [ref=e47] [cursor=pointer]:
+        - /url: ./materiales/enunciados/tarea0.txt
+      - link "Tarea 1" [ref=e48] [cursor=pointer]:
+        - /url: ./materiales/enunciados/tarea1.txt
+      - link "Tarea 2" [ref=e49] [cursor=pointer]:
+        - /url: ./materiales/enunciados/tarea2.txt
+      - link "Tarea 3" [ref=e50] [cursor=pointer]:
+        - /url: ./materiales/enunciados/tarea3.txt
+      - link "Tarea 4" [ref=e51] [cursor=pointer]:
+        - /url: ./materiales/enunciados/tarea4.txt
+      - link "Tarea 5" [ref=e52] [cursor=pointer]:
+        - /url: ./materiales/enunciados/tarea5.txt
+      - link "Tarea 6" [ref=e53] [cursor=pointer]:
+        - /url: ./materiales/enunciados/tarea6.txt
+      - link "Tarea 7" [ref=e54] [cursor=pointer]:
+        - /url: ./materiales/enunciados/tarea7.txt
+      - link "Tarea 8" [ref=e55] [cursor=pointer]:
+        - /url: ./materiales/enunciados/tarea8.txt
+      - link "Tarea 9" [ref=e56] [cursor=pointer]:
+        - /url: ./materiales/enunciados/tarea9.txt
+      - link "Tarea 10" [ref=e57] [cursor=pointer]:
+        - /url: ./materiales/enunciados/tarea10.txt
+      - link "Tarea 11" [ref=e58] [cursor=pointer]:
+        - /url: ./materiales/enunciados/tarea11.txt
+      - link "Tarea 12" [ref=e59] [cursor=pointer]:
+        - /url: ./materiales/enunciados/tarea12.txt
+      - link "Tarea 13 SQL" [ref=e60] [cursor=pointer]:
+        - /url: ./packages/base-de-datos/tarea13.sql
+      - link "Actividad 5 PDF" [ref=e61] [cursor=pointer]:
+        - /url: ./materiales/pdf/actividad5%20(4).pdf
+      - link "Actividad 6 PDF" [ref=e62] [cursor=pointer]:
+        - /url: ./materiales/pdf/actividad6%20(5).pdf
+  - generic [ref=e63]: Estructura reorganizada por packages para seguir creciendo el curso sin mezclar tipos de archivos.

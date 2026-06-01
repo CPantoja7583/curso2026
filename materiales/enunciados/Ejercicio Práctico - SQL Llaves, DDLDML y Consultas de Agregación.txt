@@ -1,0 +1,28 @@
+Ejercicio Práctico - SQL: Llaves, DDL/DML y Consultas de Agregación
+Actividad de Aprendizaje 
+SQL: Llaves, DDL/DML y Consultas de Agregación
+Introducción / Objetivo
+Actividad breve y aplicada para crear tablas con llaves (PK/FK), cargar datos y consultar información usando filtros y agregaciones. El detalle exacto (estructura, sentencias y ejemplos) está en el PDF adjunto.
+
+Descripción de la tarea
+De acuerdo con el PDF adjunto:
+
+Crear las tablas y llaves indicadas (Clientes y Cuentas), considerando integridad referencial y restricciones (CHECK, ON DELETE/UPDATE CASCADE).
+
+Insertar datos: 5 clientes (edades entre 18–85) y 15 cuentas (saldos entre −5.000 y 100.000).
+
+Aplicar DML: 1 UPDATE (ajuste de saldo) y 1 DELETE (borrado de una cuenta).
+
+Escribir las consultas solicitadas:
+
+(3) Saldo de cada cuenta del cliente de mayor edad.
+
+(4) Promedio de edad de clientes con saldo negativo.
+
+(5) Nombre y cantidad de cuentas de quienes tienen más de una.
+
+(6) Suma de saldos por cliente para quienes tienen más de una cuenta.
+
+(7) Todos los clientes y su saldo combinado, considerando solo aquellos con al menos una cuenta con saldo negativo.
+
+Importante: Revisa y sigue fielmente el PDF adjunto para la sintaxis y valores exactos.

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peliculas y Actores</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Sequelize N-N</p>
+        <h1>Peliculas y actores</h1>
+      </div>
+      <button id="refreshButton" type="button">Actualizar listas</button>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Crear pelicula</h2>
+        <form id="movieForm" class="form">
+          <label>
+            Titulo
+            <input name="titulo" placeholder="Matrix" required />
+          </label>
+          <label>
+            Anio
+            <input name="anio" type="number" min="1888" max="2100" placeholder="1999" required />
+          </label>
+          <button type="submit">Crear pelicula</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Crear actor</h2>
+        <form id="actorForm" class="form">
+          <label>
+            Nombre
+            <input name="nombre" placeholder="Keanu Reeves" required />
+          </label>
+          <label>
+            Fecha nacimiento
+            <input name="fecha_nacimiento" type="date" required />
+          </label>
+          <button type="submit">Crear actor</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Asignar actor</h2>
+        <form id="assignForm" class="form">
+          <label>
+            ID pelicula
+            <input name="pelicula_id" type="number" min="1" required />
+          </label>
+          <label>
+            ID actor
+            <input name="actor_id" type="number" min="1" required />
+          </label>
+          <button type="submit">Asignar con transaccion</button>
+        </form>
+      </section>
+
+      <section class="panel results">
+        <div class="split">
+          <div>
+            <h2>Peliculas con actores</h2>
+            <div id="moviesList" class="list"></div>
+          </div>
+          <div>
+            <h2>Actores con peliculas</h2>
+            <div id="actorsList" class="list"></div>
+          </div>
+        </div>
+        <p id="message" class="message">Carga inicial pendiente.</p>
+        <h3>Respuesta JSON</h3>
+        <pre id="jsonBox">{}</pre>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

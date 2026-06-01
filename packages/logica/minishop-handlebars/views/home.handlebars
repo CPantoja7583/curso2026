@@ -1,0 +1,34 @@
+<section class="hero-panel">
+  <div class="hero-copy">
+    <p class="eyebrow">catalogo destacado</p>
+    <h1>{{mayusculas tienda}}</h1>
+    <p class="lead">{{mensajeBienvenida}}</p>
+  </div>
+  <div class="hero-note">
+    <span>10 productos</span>
+    <span>contenido dinamico</span>
+    <span>estado en stock</span>
+  </div>
+</section>
+
+<section class="section-head">
+  <h2>Productos</h2>
+  <p>Listado generado con <code>&#123;&#123;#each&#125;&#125;</code> y estado usando <code>&#123;&#123;#if&#125;&#125;</code>.</p>
+</section>
+
+<section class="product-grid">
+  {{#each productos}}
+    <article class="product-card">
+      <img src="{{imagen}}" alt="{{nombre}}" class="product-image" />
+      <div class="product-body">
+        <p class="price">US$ {{precio}}</p>
+        <h3>{{nombre}}</h3>
+        {{#if disponible}}
+          <span class="stock in-stock">En stock</span>
+        {{else}}
+          <span class="stock out-stock">Agotado</span>
+        {{/if}}
+      </div>
+    </article>
+  {{/each}}
+</section>

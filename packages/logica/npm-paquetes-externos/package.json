@@ -1,0 +1,13 @@
+{
+  "name": "npm-paquetes-externos",
+  "version": "1.0.0",
+  "description": "Aplicacion Node.js con chalk y dayjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "dayjs": "^1.11.20"
+  }
+}

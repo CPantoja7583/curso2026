@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultas Parametrizadas II</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Node + pg</p>
+      <h1>Consultas parametrizadas II</h1>
+      <p class="lead">Panel para consultar, crear, modificar y eliminar clientes usando criterios seguros con parametros SQL.</p>
+    </section>
+
+    <section class="workspace">
+      <article class="panel wide">
+        <h2>Consultar clientes</h2>
+        <div class="filter-grid">
+          <label>RUT <input id="filter-rut" type="text" placeholder="11111111-1"></label>
+          <label>Edad <input id="filter-edad" type="number" min="0" placeholder="31"></label>
+          <label>Edad min <input id="filter-edad-min" type="number" min="0" placeholder="25"></label>
+          <label>Edad max <input id="filter-edad-max" type="number" min="0" placeholder="40"></label>
+          <label>Nombre o prefijo <input id="filter-nombre" type="text" placeholder="Ana"></label>
+        </div>
+        <div class="button-row">
+          <button id="query-all" type="button">Todos</button>
+          <button id="query-rut" type="button">Por RUT</button>
+          <button id="query-edad" type="button">Por edad</button>
+          <button id="query-range" type="button">Por rango</button>
+          <button id="query-name" type="button">Por nombre</button>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2>Crear cliente</h2>
+        <form id="create-form" class="form">
+          <label>RUT <input id="create-rut" type="text" required></label>
+          <label>Nombre <input id="create-name" type="text" required></label>
+          <label>Edad <input id="create-age" type="number" min="0" required></label>
+          <button type="submit">Crear</button>
+        </form>
+      </article>
+
+      <article class="panel">
+        <h2>Modificar nombre</h2>
+        <form id="update-form" class="form">
+          <label>RUT <input id="update-rut" type="text" required></label>
+          <label>Nuevo nombre <input id="update-name" type="text" required></label>
+          <button type="submit">Modificar</button>
+        </form>
+      </article>
+
+      <article class="panel danger-panel">
+        <h2>Eliminar clientes</h2>
+        <div class="filter-grid compact">
+          <label>RUT <input id="delete-rut" type="text"></label>
+          <label>Edad <input id="delete-age" type="number" min="0"></label>
+          <label>Edad min <input id="delete-age-min" type="number" min="0"></label>
+          <label>Edad max <input id="delete-age-max" type="number" min="0"></label>
+        </div>
+        <div class="button-row">
+          <button id="delete-rut-button" class="danger" type="button">Eliminar RUT</button>
+          <button id="delete-age-button" class="danger" type="button">Eliminar edad</button>
+          <button id="delete-range-button" class="danger" type="button">Eliminar rango</button>
+        </div>
+      </article>
+    </section>
+
+    <p id="status" class="status" aria-live="polite">Listo para consultar.</p>
+    <section id="result" class="result" aria-live="polite"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

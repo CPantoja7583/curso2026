@@ -1,0 +1,66 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - paragraph [ref=e4]: Sequelize N-N
+      - heading "Peliculas y actores" [level=1] [ref=e5]
+    - button "Actualizar listas" [ref=e6] [cursor=pointer]
+  - main [ref=e7]:
+    - generic [ref=e8]:
+      - heading "Crear pelicula" [level=2] [ref=e9]
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - text: Titulo
+          - textbox "Titulo" [ref=e12]:
+            - /placeholder: Matrix
+        - generic [ref=e13]:
+          - text: Anio
+          - spinbutton "Anio" [ref=e14]
+        - button "Crear pelicula" [active] [ref=e15] [cursor=pointer]
+    - generic [ref=e16]:
+      - heading "Crear actor" [level=2] [ref=e17]
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - text: Nombre
+          - textbox "Nombre" [ref=e20]:
+            - /placeholder: Keanu Reeves
+        - generic [ref=e21]:
+          - text: Fecha nacimiento
+          - textbox "Fecha nacimiento" [ref=e22]
+        - button "Crear actor" [ref=e23] [cursor=pointer]
+    - generic [ref=e24]:
+      - heading "Asignar actor" [level=2] [ref=e25]
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - text: ID pelicula
+          - spinbutton "ID pelicula" [ref=e28]
+        - generic [ref=e29]:
+          - text: ID actor
+          - spinbutton "ID actor" [ref=e30]
+        - button "Asignar con transaccion" [ref=e31] [cursor=pointer]
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - heading "Peliculas con actores" [level=2] [ref=e35]
+          - generic [ref=e36]:
+            - article [ref=e59]:
+              - strong [ref=e60]: "#1 Matrix"
+              - generic [ref=e61]: "1999"
+              - generic [ref=e62]: Keanu Reeves, Carrie-Anne Moss
+            - article [ref=e63]:
+              - strong [ref=e64]: "#2 John Wick"
+              - generic [ref=e65]: "2014"
+              - generic [ref=e66]: Keanu Reeves
+        - generic [ref=e45]:
+          - heading "Actores con peliculas" [level=2] [ref=e46]
+          - generic [ref=e47]:
+            - article [ref=e67]:
+              - strong [ref=e68]: "#1 Keanu Reeves"
+              - generic [ref=e69]: 1964-09-02
+              - generic [ref=e70]: Matrix, John Wick
+            - article [ref=e71]:
+              - strong [ref=e72]: "#2 Carrie-Anne Moss"
+              - generic [ref=e73]: 1967-08-21
+              - generic [ref=e74]: Matrix
+      - paragraph [ref=e56]: Listas actualizadas.
+      - heading "Respuesta JSON" [level=3] [ref=e57]
+      - generic [ref=e58]: "{ \"status\": 200, \"ok\": true, \"data\": [ { \"id\": 1, \"nombre\": \"Keanu Reeves\", \"fecha_nacimiento\": \"1964-09-02\", \"Peliculas\": [ { \"id\": 1, \"titulo\": \"Matrix\" }, { \"id\": 2, \"titulo\": \"John Wick\" } ] }, { \"id\": 2, \"nombre\": \"Carrie-Anne Moss\", \"fecha_nacimiento\": \"1967-08-21\", \"Peliculas\": [ { \"id\": 1, \"titulo\": \"Matrix\" } ] } ] }"

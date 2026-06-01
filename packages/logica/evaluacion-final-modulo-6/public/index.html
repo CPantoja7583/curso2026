@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Civil de Mascotas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="masthead">
+      <p class="eyebrow">Ministerio de las mascotas</p>
+      <h1>Registro Civil de Mascotas</h1>
+      <p class="lead">Administra mascotas y duenos desde un servicio Node con archivo JSON.</p>
+    </section>
+
+    <section class="workspace">
+      <article class="panel">
+        <h2>Registrar mascota</h2>
+        <form id="create-form" class="form">
+          <label>
+            Nombre de la mascota
+            <input id="nombre" name="nombre" type="text" required placeholder="Ej: Luna">
+          </label>
+          <label>
+            RUT del dueno
+            <input id="rut" name="rut" type="text" required placeholder="Ej: 11111111-1">
+          </label>
+          <button type="submit">Guardar mascota</button>
+        </form>
+      </article>
+
+      <article class="panel">
+        <h2>Buscar registros</h2>
+        <div class="search-grid">
+          <label>
+            Por nombre
+            <input id="search-name" type="text" placeholder="Nombre">
+          </label>
+          <label>
+            Por RUT
+            <input id="search-rut" type="text" placeholder="RUT">
+          </label>
+        </div>
+        <div class="button-row">
+          <button id="load-all" type="button">Ver todas</button>
+          <button id="search-name-button" type="button">Buscar nombre</button>
+          <button id="search-rut-button" type="button">Buscar RUT</button>
+        </div>
+      </article>
+
+      <article class="panel danger-panel">
+        <h2>Eliminar registros</h2>
+        <div class="search-grid">
+          <label>
+            Eliminar por nombre
+            <input id="delete-name" type="text" placeholder="Nombre">
+          </label>
+          <label>
+            Eliminar por RUT
+            <input id="delete-rut" type="text" placeholder="RUT">
+          </label>
+        </div>
+        <div class="button-row">
+          <button id="delete-name-button" class="danger" type="button">Eliminar nombre</button>
+          <button id="delete-rut-button" class="danger" type="button">Eliminar RUT</button>
+        </div>
+      </article>
+    </section>
+
+    <p id="status" class="status" aria-live="polite">Listo para consultar registros.</p>
+    <section id="result" class="results" aria-live="polite"></section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.7.9/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

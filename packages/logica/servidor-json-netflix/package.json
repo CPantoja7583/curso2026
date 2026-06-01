@@ -1,0 +1,9 @@
+{
+  "name": "servidor-json-netflix",
+  "version": "1.0.0",
+  "description": "Servidor web en Node para catalogo de peliculas y series en JSON",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

@@ -1,0 +1,7 @@
+Zapatillas, 25990
+Jeans, 12990
+Polera, 8990
+Mochila, 31990
+Audifonos, 45990
+
+Mouse, 14990

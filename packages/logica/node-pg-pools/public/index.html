@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node + pg Pools</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Ejercicio Practico</p>
+      <h1>Node + pg</h1>
+      <p class="lead">Dos conexiones PostgreSQL con pool: una por configuracion y otra por connection string.</p>
+    </section>
+
+    <section class="actions" aria-label="Controles">
+      <button id="load-finanzas" type="button">Cargar finanzas</button>
+      <button id="load-clientes" type="button">Cargar clientes</button>
+    </section>
+
+    <p id="status" class="status" aria-live="polite">Listo para consultar la base de datos.</p>
+
+    <section class="grid">
+      <article class="panel">
+        <header class="panel-header">
+          <p class="tag">Pool por configuracion</p>
+          <h2>Finanzas personales</h2>
+        </header>
+        <div id="finanzas-result" class="result-box"></div>
+      </article>
+
+      <article class="panel">
+        <header class="panel-header">
+          <p class="tag">Pool por connection string</p>
+          <h2>Clientes</h2>
+        </header>
+        <div id="clientes-result" class="result-box"></div>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,52 +1,59 @@
 # Curso de JavaScript 2026
 
-Repositorio base para organizar practicas, actividades y proyectos del curso.
-
-## Requisitos
-
-- Navegador web actualizado: Chrome, Edge o Firefox.
-- Opcional: Python 3 para levantar un servidor local.
+Repositorio reorganizado por areas de trabajo para separar ejercicios de logica, base de datos y material de apoyo.
 
 ## Estructura
 
-- `index.html`: portada principal del curso.
-- `Curso/`: actividad con estructura HTML, CSS y JS.
-- `EP2/`: ejercicios practicos y evaluaciones.
-- `Portafolio/`: portafolio personal.
-- `actividad4.*`: actividad independiente.
-- `tarea0.txt` a `tarea12.txt`: enunciados, apuntes y respuestas del curso.
+- `index.html`: portada principal del repositorio.
+- `packages/logica/`: ejercicios y proyectos HTML, CSS y JavaScript.
+- `packages/base-de-datos/`: scripts y consultas SQL.
+- `materiales/enunciados/`: tareas y enunciados en texto.
+- `materiales/pdf/`: PDFs del curso y evaluaciones.
 
 ## Como ejecutar el proyecto
 
-### Opcion 1: abrir directamente en el navegador
+### Opcion 1: abrir la portada
 
-1. Entra a la carpeta del proyecto.
-2. Abre el archivo `index.html` con tu navegador.
-3. Usa la portada para navegar a `Curso`, `EP2`, `Portafolio` y las tareas.
+1. Abre `index.html` en el navegador.
+2. Entra desde ahi al package que quieras revisar.
 
-### Opcion 2: ejecutar con servidor local
-
-Si quieres abrirlo como sitio local, puedes usar Python:
+### Opcion 2: usar servidor local
 
 ```bash
 python -m http.server 8000
 ```
 
-Luego abre en el navegador:
+Luego abre:
 
 ```text
 http://localhost:8000
 ```
 
-## Archivos principales
+## Packages
 
-- `index.html`: pagina principal del curso.
-- `README.md`: documentacion del proyecto.
-- `Curso/index.html`: actividad principal con assets separados.
-- `EP2/index.html`: indice de ejercicios practicos.
-- `Portafolio/index.html`: portafolio personal.
-- `tarea12.txt`: desarrollo de la tarea de la clinica veterinaria.
+### Logica
 
-## Objetivo del repo
+Contiene el trabajo de HTML, CSS y JavaScript:
 
-Mantener en un solo lugar el avance del curso, con una entrada simple para revisar ejercicios, tareas y proyectos.
+- `packages/logica/Curso/`
+- `packages/logica/EP2/`
+- `packages/logica/Portafolio/`
+- `packages/logica/actividad4/`
+
+### Base de datos
+
+Contiene scripts SQL y ejercicios relacionados:
+
+- `packages/base-de-datos/clientes.sql`
+- `packages/base-de-datos/tarea13.sql`
+
+### Materiales
+
+Contiene enunciados y PDFs usados durante el curso:
+
+- `materiales/enunciados/`
+- `materiales/pdf/`
+
+## Objetivo
+
+Mantener el repositorio mas ordenado y escalable, separando claramente la logica del curso, los ejercicios de base de datos y el material de referencia.

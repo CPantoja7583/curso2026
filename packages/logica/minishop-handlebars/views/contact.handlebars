@@ -1,0 +1,29 @@
+<section class="form-panel">
+  <div class="section-head compact">
+    <h1>Contacto</h1>
+    <p>Envia tu mensaje y el servidor renderizara una confirmacion personalizada.</p>
+  </div>
+
+  {{#if error}}
+    <div class="message error">{{error}}</div>
+  {{/if}}
+
+  <form action="/contact" method="POST" class="contact-form">
+    <label>
+      Nombre
+      <input type="text" name="nombre" value="{{valores.nombre}}" placeholder="Tu nombre" />
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" value="{{valores.email}}" placeholder="correo@ejemplo.com" />
+    </label>
+
+    <label>
+      Mensaje
+      <textarea name="mensaje" rows="6" placeholder="Escribe tu mensaje">{{valores.mensaje}}</textarea>
+    </label>
+
+    <button type="submit">Enviar mensaje</button>
+  </form>
+</section>

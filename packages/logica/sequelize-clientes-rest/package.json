@@ -1,0 +1,17 @@
+{
+  "name": "sequelize-clientes-rest",
+  "version": "1.0.0",
+  "description": "Actividad practica: backend con Sequelize, API REST y frontend basico.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "pg": "^8.16.3",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {}
+}

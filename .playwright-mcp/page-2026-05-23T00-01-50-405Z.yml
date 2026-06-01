@@ -1,0 +1,84 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: BJ
+      - generic [ref=e6]:
+        - paragraph [ref=e7]: Node + JSON
+        - heading "Banco Central de Clientes" [level=1] [ref=e8]
+    - navigation "Navegacion principal" [ref=e9]:
+      - button "Inicio Resumen y accesos directos" [ref=e10] [cursor=pointer]:
+        - generic [ref=e11]: Inicio
+        - text: Resumen y accesos directos
+      - button "Consultar Listados y filtros operativos" [ref=e12] [cursor=pointer]:
+        - generic [ref=e13]: Consultar
+        - text: Listados y filtros operativos
+      - button "Crear cliente Alta con cuenta RUT o ahorro" [ref=e14] [cursor=pointer]:
+        - generic [ref=e15]: Crear cliente
+        - text: Alta con cuenta RUT o ahorro
+      - button "Agregar cuentas Extender clientes existentes" [ref=e16] [cursor=pointer]:
+        - generic [ref=e17]: Agregar cuentas
+        - text: Extender clientes existentes
+      - button "Eliminar Borrado seguro con reglas de negocio" [ref=e18] [cursor=pointer]:
+        - generic [ref=e19]: Eliminar
+        - text: Borrado seguro con reglas de negocio
+    - generic [ref=e20]:
+      - paragraph [ref=e21]: Estado del sistema
+      - paragraph [ref=e22]: Panel interno para ejecutivos. La persistencia se mantiene en archivo JSON y las reglas del negocio siguen activas en backend.
+  - main [ref=e23]:
+    - generic [ref=e24]:
+      - button "Abrir menu" [ref=e25] [cursor=pointer]
+      - generic [ref=e29]:
+        - paragraph [ref=e30]: App administrativa
+        - heading "Gestion de clientes y cuentas bancarias" [level=2] [ref=e31]
+      - generic [ref=e34]: Persistencia en JSON activa
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - paragraph [ref=e37]: Panel operativo
+        - heading "Una vista mas clara para consultar, crear y administrar cuentas sin perder la logica del ejercicio." [level=3] [ref=e38]
+        - paragraph [ref=e39]: Organiza el trabajo por tareas, muestra un resumen inicial y deja las operaciones principales a un clic, tanto en escritorio como en mobile.
+        - generic [ref=e40]:
+          - button "Ver clientes" [ref=e41] [cursor=pointer]
+          - button "Crear cliente" [ref=e42] [cursor=pointer]
+      - generic [ref=e43]:
+        - img "Panel bancario" [ref=e44]
+        - generic [ref=e45]: Control de cuentas y clientes
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: Inicio
+          - heading "Resumen general" [level=2] [ref=e50]
+        - button "Actualizar resumen" [ref=e51] [cursor=pointer]
+      - generic [ref=e52]:
+        - article [ref=e53]:
+          - paragraph [ref=e54]: Clientes registrados
+          - strong [ref=e55]: "2"
+        - article [ref=e56]:
+          - paragraph [ref=e57]: Clientes con cuenta RUT
+          - strong [ref=e58]: "2"
+        - article [ref=e59]:
+          - paragraph [ref=e60]: Cuentas de ahorro
+          - strong [ref=e61]: "3"
+      - generic [ref=e62]:
+        - button "Consulta Revisar cartera completa Lista todos los clientes y sus productos." [ref=e63] [cursor=pointer]:
+          - text: Consulta
+          - strong [ref=e64]: Revisar cartera completa
+          - paragraph [ref=e65]: Lista todos los clientes y sus productos.
+        - button "Alta Registrar nuevo cliente Crea una ficha con cuenta RUT o con ahorro inicial." [ref=e66] [cursor=pointer]:
+          - text: Alta
+          - strong [ref=e67]: Registrar nuevo cliente
+          - paragraph [ref=e68]: Crea una ficha con cuenta RUT o con ahorro inicial.
+        - button "Extension Agregar cuentas Amplia la relacion de un cliente existente." [ref=e69] [cursor=pointer]:
+          - text: Extension
+          - strong [ref=e70]: Agregar cuentas
+          - paragraph [ref=e71]: Amplia la relacion de un cliente existente.
+        - button "Control Eliminar con seguridad Respeta la regla de no dejar clientes sin productos." [ref=e72] [cursor=pointer]:
+          - text: Control
+          - strong [ref=e73]: Eliminar con seguridad
+          - paragraph [ref=e74]: Respeta la regla de no dejar clientes sin productos.
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - paragraph [ref=e78]: Resultado
+          - heading "Salida de la operacion" [level=2] [ref=e79]
+        - paragraph [ref=e80]: Resumen actualizado correctamente.
+      - generic [ref=e82]: Usa el panel para listar o modificar clientes y cuentas.

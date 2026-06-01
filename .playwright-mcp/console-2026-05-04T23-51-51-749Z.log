@@ -1,0 +1,3 @@
+[    4042ms] [TABLE] [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object] @ http://127.0.0.1:8130/tarea10.js:70
+[   16336ms] [LOG] Agrupacion por especie: {Human: Array(9), Alien: Array(1)} @ http://127.0.0.1:8130/tarea10.js:103
+[   29766ms] [LOG] Ficha de personaje: {id: 6, name: Abadango Cluster Princess, status: Alive, species: Alien, type: } @ http://127.0.0.1:8130/tarea10.js:137

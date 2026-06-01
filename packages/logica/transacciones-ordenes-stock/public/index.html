@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ordenes y Stock</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <p class="eyebrow">Transacciones PostgreSQL</p>
+      <h1>Ordenes de compra y stock</h1>
+      <nav>
+        <a href="productos.html">Productos</a>
+        <a href="ordenes.html">Ordenes por cliente</a>
+        <a href="crear.html">Crear orden</a>
+      </nav>
+    </header>
+    <main class="home-grid">
+      <section>
+        <h2>Flujo principal</h2>
+        <p>El backend usa `BEGIN`, valida stock con productos bloqueados, inserta orden, despacho y lista de productos, descuenta existencias y confirma con `COMMIT`.</p>
+      </section>
+      <section>
+        <h2>Rollback</h2>
+        <p>Si un producto no existe o la cantidad solicitada supera el stock, se ejecuta `ROLLBACK` y la respuesta indica la falta de stock.</p>
+      </section>
+    </main>
+  </body>
+</html>

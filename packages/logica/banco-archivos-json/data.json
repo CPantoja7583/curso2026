@@ -1,0 +1,59 @@
+[
+  {
+    "idCliente": 1,
+    "nombre": "Ana Torres",
+    "cuentaRut": {
+      "numero": "RUT-1001",
+      "saldo": 150000
+    },
+    "cuentasAhorro": [
+      {
+        "numero": "AHO-2001",
+        "saldo": 300000
+      }
+    ]
+  },
+  {
+    "idCliente": 2,
+    "nombre": "Bruno Diaz",
+    "cuentaRut": {
+      "numero": "RUT-1002",
+      "saldo": 95000
+    },
+    "cuentasAhorro": [
+      {
+        "numero": "AHO-2002",
+        "saldo": 120000
+      },
+      {
+        "numero": "AHO-2003",
+        "saldo": 450000
+      }
+    ]
+  },
+  {
+    "idCliente": 3,
+    "nombre": "test",
+    "cuentaRut": {
+      "numero": "321321321-9",
+      "saldo": 20000
+    },
+    "cuentasAhorro": [
+      {
+        "numero": "321321",
+        "saldo": 222
+      }
+    ]
+  },
+  {
+    "idCliente": 4,
+    "nombre": "test",
+    "cuentaRut": null,
+    "cuentasAhorro": [
+      {
+        "numero": "ah-055",
+        "saldo": 35000
+      }
+    ]
+  }
+]

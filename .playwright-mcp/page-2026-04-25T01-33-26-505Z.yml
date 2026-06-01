@@ -1,0 +1,78 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - article [ref=e4]:
+      - generic [ref=e5]: Inicio del curso
+      - heading "JavaScript 2026" [level=1] [ref=e6]
+      - paragraph [ref=e7]: Punto de entrada para revisar avances, ejercicios, tareas y proyectos del curso. La idea es tener una portada clara para no perder tiempo buscando archivos sueltos.
+      - generic [ref=e8]:
+        - generic [ref=e9]: HTML
+        - generic [ref=e10]: CSS
+        - generic [ref=e11]: JavaScript
+        - generic [ref=e12]: Practica continua
+    - complementary [ref=e13]:
+      - generic [ref=e14]:
+        - heading "Ruta de trabajo" [level=2] [ref=e15]
+        - paragraph [ref=e16]: Este repositorio ya tiene varias entregas. Desde aqui puedes entrar rapido a los espacios mas importantes y seguir avanzando con una estructura mas ordenada.
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - strong [ref=e19]: Curso
+          - text: Actividad base con estructura de carpetas y recursos separados.
+        - generic [ref=e20]:
+          - strong [ref=e21]: EP2
+          - text: Bloque de ejercicios practicos, evaluaciones y mini proyectos.
+        - generic [ref=e22]:
+          - strong [ref=e23]: Portafolio
+          - text: Sitio personal trabajado dentro del aprendizaje del curso.
+  - region "Accesos principales" [ref=e24]:
+    - 'link "Proyecto Curso Abre la actividad organizada con `ASSETS/CSS`, `ASSETS/JS` e imagenes. Entrar" [ref=e25] [cursor=pointer]':
+      - /url: ./Curso/index.html
+      - generic [ref=e26]: Proyecto
+      - heading "Curso" [level=3] [ref=e27]
+      - paragraph [ref=e28]: "Abre la actividad organizada con `ASSETS/CSS`, `ASSETS/JS` e imagenes."
+      - generic [ref=e29]: Entrar
+    - link "Ejercicios EP2 Revisa ejercicios practicos, callbacks, pokedex, actividad 4 y evaluaciones. Entrar" [ref=e30] [cursor=pointer]:
+      - /url: ./EP2/index.html
+      - generic [ref=e31]: Ejercicios
+      - heading "EP2" [level=3] [ref=e32]
+      - paragraph [ref=e33]: Revisa ejercicios practicos, callbacks, pokedex, actividad 4 y evaluaciones.
+      - generic [ref=e34]: Entrar
+    - link "Sitio Portafolio Acceso directo al portafolio personal desarrollado durante el proceso. Entrar" [ref=e35] [cursor=pointer]:
+      - /url: ./Portafolio/index.html
+      - generic [ref=e36]: Sitio
+      - heading "Portafolio" [level=3] [ref=e37]
+      - paragraph [ref=e38]: Acceso directo al portafolio personal desarrollado durante el proceso.
+      - generic [ref=e39]: Entrar
+    - link "Actividad Actividad 4 Version independiente con su HTML, CSS, JS y documento PDF de referencia. Entrar" [ref=e40] [cursor=pointer]:
+      - /url: ./actividad4.html
+      - generic [ref=e41]: Actividad
+      - heading "Actividad 4" [level=3] [ref=e42]
+      - paragraph [ref=e43]: Version independiente con su HTML, CSS, JS y documento PDF de referencia.
+      - generic [ref=e44]: Entrar
+  - region "Tareas del curso" [ref=e45]:
+    - heading "Tareas y apuntes" [level=2] [ref=e46]
+    - generic [ref=e47]:
+      - link "Tarea 0" [ref=e48] [cursor=pointer]:
+        - /url: ./tarea0.txt
+      - link "Tarea 1" [ref=e49] [cursor=pointer]:
+        - /url: ./tarea1.txt
+      - link "Tarea 2" [ref=e50] [cursor=pointer]:
+        - /url: ./tarea2.txt
+      - link "Tarea 3" [ref=e51] [cursor=pointer]:
+        - /url: ./tarea3.txt
+      - link "Tarea 4" [ref=e52] [cursor=pointer]:
+        - /url: ./tarea4.txt
+      - link "Tarea 5" [ref=e53] [cursor=pointer]:
+        - /url: ./tarea5.txt
+      - link "Tarea 6" [ref=e54] [cursor=pointer]:
+        - /url: ./tarea6.txt
+      - link "Tarea 7" [ref=e55] [cursor=pointer]:
+        - /url: ./tarea7.txt
+      - link "Tarea 8" [ref=e56] [cursor=pointer]:
+        - /url: ./tarea8.txt
+      - link "Tarea 9" [ref=e57] [cursor=pointer]:
+        - /url: ./tarea9.txt
+      - link "Tarea 10" [ref=e58] [cursor=pointer]:
+        - /url: ./tarea10.txt
+      - link "Tarea 11" [ref=e59] [cursor=pointer]:
+        - /url: ./tarea11.txt
+  - generic [ref=e60]: Repositorio inicializado como hub del curso para seguir trabajando sin mezclar ni perder accesos.

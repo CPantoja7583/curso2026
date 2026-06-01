@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Orden</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="index.html">Menu</a>
+      <h1>Crear orden</h1>
+    </header>
+    <main class="split">
+      <section class="panel">
+        <form id="orderForm" class="form">
+          <label>
+            RUT cliente
+            <input name="rut" value="11.111.111-1" required />
+          </label>
+          <label>
+            ID direccion
+            <input name="id_direccion" type="number" value="1" min="1" required />
+          </label>
+          <fieldset>
+            <legend>Productos</legend>
+            <label>
+              ID producto 1
+              <input name="producto_1" type="number" value="1" min="1" />
+            </label>
+            <label>
+              Cantidad 1
+              <input name="cantidad_1" type="number" value="1" min="1" />
+            </label>
+            <label>
+              ID producto 2
+              <input name="producto_2" type="number" value="2" min="1" />
+            </label>
+            <label>
+              Cantidad 2
+              <input name="cantidad_2" type="number" value="1" min="1" />
+            </label>
+          </fieldset>
+          <div class="actions">
+            <button type="submit">Crear orden</button>
+            <button id="rollbackDemo" class="danger" type="button">Probar rollback</button>
+          </div>
+        </form>
+      </section>
+      <section class="panel">
+        <h2>Resultado</h2>
+        <p id="message" class="message"></p>
+        <pre id="jsonBox">{}</pre>
+      </section>
+    </main>
+    <script src="crear.js"></script>
+  </body>
+</html>

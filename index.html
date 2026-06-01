@@ -18,9 +18,7 @@
       --shadow: 0 20px 60px rgba(55, 40, 24, 0.12);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -88,16 +86,11 @@
       text-transform: uppercase;
     }
 
-    h1,
-    h2,
-    h3,
-    p {
-      margin: 0;
-    }
+    h1, h2, h3, p { margin: 0; }
 
     h1 {
       margin-top: 18px;
-      max-width: 10ch;
+      max-width: 11ch;
       font-size: clamp(2.8rem, 8vw, 5.4rem);
       line-height: 0.95;
       font-weight: 700;
@@ -134,14 +127,8 @@
       gap: 20px;
     }
 
-    .panel h2 {
-      font-size: 1.5rem;
-    }
-
-    .panel p {
-      color: var(--muted);
-      line-height: 1.7;
-    }
+    .panel h2 { font-size: 1.5rem; }
+    .panel p { color: var(--muted); line-height: 1.7; }
 
     .stack {
       display: grid;
@@ -189,14 +176,8 @@
       letter-spacing: 0.08em;
     }
 
-    .link-card h3 {
-      font-size: 1.55rem;
-    }
-
-    .link-card p {
-      color: var(--muted);
-      line-height: 1.65;
-    }
+    .link-card h3 { font-size: 1.55rem; }
+    .link-card p { color: var(--muted); line-height: 1.65; }
 
     .arrow {
       margin-top: auto;
@@ -241,20 +222,15 @@
     }
 
     @media (max-width: 900px) {
-      .hero,
-      .grid,
-      .tasks-grid {
+      .hero, .grid, .tasks-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-card,
-      .panel {
+      .hero-card, .panel {
         padding: 28px;
       }
 
-      h1 {
-        max-width: none;
-      }
+      h1 { max-width: none; }
     }
   </style>
 </head>
@@ -262,98 +238,100 @@
   <main class="shell">
     <section class="hero">
       <article class="hero-card">
-        <span class="eyebrow">Inicio del curso</span>
+        <span class="eyebrow">Repositorio Ordenado</span>
         <h1>JavaScript 2026</h1>
         <p class="lead">
-          Punto de entrada para revisar avances, ejercicios, tareas y proyectos del curso.
-          La idea es tener una portada clara para no perder tiempo buscando archivos sueltos.
+          El proyecto ahora esta separado por packages para distinguir la logica del curso,
+          los ejercicios SQL y los materiales de apoyo.
         </p>
 
         <div class="hero-meta">
-          <span class="meta-pill">HTML</span>
-          <span class="meta-pill">CSS</span>
-          <span class="meta-pill">JavaScript</span>
-          <span class="meta-pill">Practica continua</span>
+          <span class="meta-pill">packages/logica</span>
+          <span class="meta-pill">packages/base-de-datos</span>
+          <span class="meta-pill">materiales</span>
         </div>
       </article>
 
       <aside class="panel">
         <div>
-          <h2>Ruta de trabajo</h2>
+          <h2>Nueva estructura</h2>
           <p>
-            Este repositorio ya tiene varias entregas. Desde aqui puedes entrar rapido a los
-            espacios mas importantes y seguir avanzando con una estructura mas ordenada.
+            La raiz queda liviana y las entregas se agrupan por tipo de trabajo.
+            Asi es mas facil encontrar proyectos, consultas SQL y enunciados.
           </p>
         </div>
 
         <div class="stack">
           <div class="stack-item">
-            <strong>Curso</strong>
-            Actividad base con estructura de carpetas y recursos separados.
+            <strong>Logica</strong>
+            HTML, CSS y JavaScript de ejercicios, actividades y mini proyectos.
           </div>
           <div class="stack-item">
-            <strong>EP2</strong>
-            Bloque de ejercicios practicos, evaluaciones y mini proyectos.
+            <strong>Base de datos</strong>
+            Scripts SQL y tareas relacionadas a modelado y consultas.
           </div>
           <div class="stack-item">
-            <strong>Portafolio</strong>
-            Sitio personal trabajado dentro del aprendizaje del curso.
+            <strong>Materiales</strong>
+            Enunciados, PDFs y documentos del curso.
           </div>
         </div>
       </aside>
     </section>
 
     <section class="grid" aria-label="Accesos principales">
-      <a class="link-card" href="./Curso/index.html">
-        <span class="kicker">Proyecto</span>
-        <h3>Curso</h3>
-        <p>Abre la actividad organizada con `ASSETS/CSS`, `ASSETS/JS` e imagenes.</p>
+      <a class="link-card" href="./packages/logica/index.html">
+        <span class="kicker">Package</span>
+        <h3>Logica</h3>
+        <p>Acceso a `Curso`, `EP2`, `Portafolio` y `actividad4` con sus archivos web.</p>
         <span class="arrow">Entrar</span>
       </a>
 
-      <a class="link-card" href="./EP2/index.html">
-        <span class="kicker">Ejercicios</span>
-        <h3>EP2</h3>
-        <p>Revisa ejercicios practicos, callbacks, pokedex, actividad 4 y evaluaciones.</p>
+      <a class="link-card" href="./packages/base-de-datos/index.html">
+        <span class="kicker">Package</span>
+        <h3>Base de datos</h3>
+        <p>Scripts SQL separados del resto del trabajo para que queden ubicables.</p>
         <span class="arrow">Entrar</span>
       </a>
 
-      <a class="link-card" href="./Portafolio/index.html">
-        <span class="kicker">Sitio</span>
-        <h3>Portafolio</h3>
-        <p>Acceso directo al portafolio personal desarrollado durante el proceso.</p>
+      <a class="link-card" href="./materiales/index.html">
+        <span class="kicker">Material</span>
+        <h3>Materiales</h3>
+        <p>Enunciados en texto y PDFs del curso reunidos en un solo lugar.</p>
         <span class="arrow">Entrar</span>
       </a>
 
-      <a class="link-card" href="./actividad4.html">
-        <span class="kicker">Actividad</span>
-        <h3>Actividad 4</h3>
-        <p>Version independiente con su HTML, CSS, JS y documento PDF de referencia.</p>
-        <span class="arrow">Entrar</span>
+      <a class="link-card" href="./packages/logica/EP2/Ejercicio%20Pr%C3%A1ctico%20-%20Api%20Rest%20n%C2%B01.html">
+        <span class="kicker">Entrega</span>
+        <h3>API REST N°1</h3>
+        <p>Acceso directo al ejercicio de Rick and Morty ya implementado.</p>
+        <span class="arrow">Abrir</span>
       </a>
     </section>
 
-    <section class="tasks" aria-label="Tareas del curso">
-      <h2>Tareas y apuntes</h2>
+    <section class="tasks" aria-label="Accesos rapidos">
+      <h2>Accesos rapidos</h2>
       <div class="tasks-grid">
-        <a class="task-link" href="./tarea0.txt">Tarea 0</a>
-        <a class="task-link" href="./tarea1.txt">Tarea 1</a>
-        <a class="task-link" href="./tarea2.txt">Tarea 2</a>
-        <a class="task-link" href="./tarea3.txt">Tarea 3</a>
-        <a class="task-link" href="./tarea4.txt">Tarea 4</a>
-        <a class="task-link" href="./tarea5.txt">Tarea 5</a>
-        <a class="task-link" href="./tarea6.txt">Tarea 6</a>
-        <a class="task-link" href="./tarea7.txt">Tarea 7</a>
-        <a class="task-link" href="./tarea8.txt">Tarea 8</a>
-        <a class="task-link" href="./tarea9.txt">Tarea 9</a>
-        <a class="task-link" href="./tarea10.txt">Tarea 10</a>
-        <a class="task-link" href="./tarea11.txt">Tarea 11</a>
-        <a class="task-link" href="./tarea12.txt">Tarea 12</a>
+        <a class="task-link" href="./materiales/enunciados/tarea0.txt">Tarea 0</a>
+        <a class="task-link" href="./materiales/enunciados/tarea1.txt">Tarea 1</a>
+        <a class="task-link" href="./materiales/enunciados/tarea2.txt">Tarea 2</a>
+        <a class="task-link" href="./materiales/enunciados/tarea3.txt">Tarea 3</a>
+        <a class="task-link" href="./materiales/enunciados/tarea4.txt">Tarea 4</a>
+        <a class="task-link" href="./materiales/enunciados/tarea5.txt">Tarea 5</a>
+        <a class="task-link" href="./materiales/enunciados/tarea6.txt">Tarea 6</a>
+        <a class="task-link" href="./materiales/enunciados/tarea7.txt">Tarea 7</a>
+        <a class="task-link" href="./materiales/enunciados/tarea8.txt">Tarea 8</a>
+        <a class="task-link" href="./materiales/enunciados/tarea9.txt">Tarea 9</a>
+        <a class="task-link" href="./materiales/enunciados/tarea10.txt">Tarea 10</a>
+        <a class="task-link" href="./materiales/enunciados/tarea11.txt">Tarea 11</a>
+        <a class="task-link" href="./materiales/enunciados/tarea12.txt">Tarea 12</a>
+        <a class="task-link" href="./packages/base-de-datos/tarea13.sql">Tarea 13 SQL</a>
+        <a class="task-link" href="./materiales/pdf/actividad5%20(4).pdf">Actividad 5 PDF</a>
+        <a class="task-link" href="./materiales/pdf/actividad6%20(5).pdf">Actividad 6 PDF</a>
       </div>
     </section>
 
     <footer>
-      Repositorio inicializado como hub del curso para seguir trabajando sin mezclar ni perder accesos.
+      Estructura reorganizada por packages para seguir creciendo el curso sin mezclar tipos de archivos.
     </footer>
   </main>
 </body>

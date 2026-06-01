@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD de Clientes</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Node + pg</p>
+        <h1>CRUD de clientes</h1>
+      </div>
+      <button id="refreshButton" type="button">Consultar clientes</button>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Crear cliente</h2>
+        <form id="createForm" class="form">
+          <label>
+            RUT
+            <input name="rut" type="text" placeholder="11.111.111-1" required />
+          </label>
+          <label>
+            Nombre
+            <input name="nombre" type="text" placeholder="Ana Perez" required />
+          </label>
+          <label>
+            Edad
+            <input name="edad" type="number" min="0" step="1" placeholder="31" required />
+          </label>
+          <button type="submit">Crear</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Modificar nombre</h2>
+        <form id="updateForm" class="form">
+          <label>
+            RUT
+            <input name="rut" type="text" placeholder="22.222.222-2" required />
+          </label>
+          <label>
+            Nuevo nombre
+            <input name="nombre" type="text" placeholder="Luis Soto" required />
+          </label>
+          <button type="submit">Modificar</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Eliminar cliente</h2>
+        <form id="deleteForm" class="form">
+          <label>
+            RUT
+            <input name="rut" type="text" placeholder="33.333.333-3" required />
+          </label>
+          <button class="danger" type="submit">Eliminar</button>
+        </form>
+      </section>
+
+      <section class="panel results">
+        <div class="section-heading">
+          <div>
+            <h2>Consultar clientes</h2>
+            <p id="statusMessage" class="muted">Presiona consultar para cargar la tabla.</p>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>RUT</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+              </tr>
+            </thead>
+            <tbody id="clientesTable">
+              <tr>
+                <td colspan="3">Sin datos cargados.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+- generic [ref=e2]:
+  - link "Saltar al contenido principal" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - link "A Aurora Bank PostgreSQL Banking Lab" [ref=e6] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e7]: A
+        - generic [ref=e8]:
+          - strong [ref=e9]: Aurora Bank
+          - generic [ref=e10]: PostgreSQL Banking Lab
+      - navigation "Navegacion principal" [ref=e11]:
+        - link "Inicio" [ref=e12] [cursor=pointer]:
+          - /url: "#/"
+        - link "Beneficios" [ref=e13] [cursor=pointer]:
+          - /url: "#/beneficios"
+        - link "Seguridad" [ref=e14] [cursor=pointer]:
+          - /url: "#/seguridad"
+        - link "FAQ" [ref=e15] [cursor=pointer]:
+          - /url: "#/faq"
+        - link "Contacto" [ref=e16] [cursor=pointer]:
+          - /url: "#/contacto"
+      - generic [ref=e17]:
+        - link "Ingresar" [ref=e18] [cursor=pointer]:
+          - /url: "#/login"
+        - link "Crear cuenta" [ref=e19] [cursor=pointer]:
+          - /url: "#/registro"
+    - main [active] [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - paragraph [ref=e23]: Ingreso seguro
+          - heading "Entra a tu panel y opera en segundos." [level=1] [ref=e24]
+          - paragraph [ref=e25]: Usa tus credenciales para revisar tu cuenta o administrar la plataforma.
+        - generic [ref=e26]:
+          - heading "Iniciar sesion" [level=2] [ref=e27]
+          - generic [ref=e28]:
+            - generic [ref=e29]: Correo
+            - textbox "Correo" [ref=e30]
+          - generic [ref=e31]:
+            - generic [ref=e32]: Password
+            - textbox "Password" [ref=e33]
+          - button "Ingresar" [ref=e34] [cursor=pointer]
+    - contentinfo [ref=e35]:
+      - paragraph [ref=e36]: Aurora Bank v1. Proyecto academico con OpenAPI, JWT y accesibilidad practica.
+      - link "Ver Swagger" [ref=e37] [cursor=pointer]:
+        - /url: http://127.0.0.1:4000/docs

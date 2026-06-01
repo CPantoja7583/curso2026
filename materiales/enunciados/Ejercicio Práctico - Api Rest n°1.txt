@@ -1,0 +1,89 @@
+Ejercicio Práctico - Api Rest n°1
+Actividad Consumo de API REST: Rick and Morty API
+Introducción / Objetivo
+En esta actividad pondrás en práctica el uso de API REST consumiendo información desde un servicio externo. El objetivo es comprender cómo obtener datos mediante peticiones HTTP, manipular los resultados y representarlos en una interfaz básica. Además, aplicarás un criterio de optimización al reducir llamadas innecesarias al servidor.
+
+Instrucciones de la Tarea
+Consumo básico de la API REST
+
+Crea un programa que obtenga información del siguiente endpoint:
+https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10
+
+La aplicación debe incluir botones para:
+
+Obtener la lista de los 10 primeros personajes de la API.
+
+Mostrar los siguientes atributos: id, name, species, image.
+
+Agrupar los personajes por especie en una lista ordenada.
+
+Crear una ficha individual con la información de algún personaje.
+
+Optimización en el consumo de datos
+
+Adapta el servicio del ejercicio anterior para que el listado se obtenga solo la primera vez que presiones el botón.
+
+A partir de la segunda vez, la información debe mostrarse de forma local (almacenada en memoria), evitando nuevas llamadas a la API.
+
+Puedes consultar la documentación oficial aquí: Rick and Morty API Documentation.
+
+Guías y Sugerencias Técnicas
+Usa fetch() o axios para obtener los datos desde el endpoint.
+
+fetch("https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10")
+  .then(res => res.json())
+  .then(data => console.log(data));
+Para trabajar con listas y agrupaciones, apóyate en métodos como .map(), .filter() y .reduce().
+
+Usa estructuras simples en HTML (listas, tablas o tarjetas) para mostrar la información (<ul>, <table>, <div> con clases).
+
+Considera almacenar los datos obtenidos en una variable global o estructura de datos local, evitando así llamar al servicio en cada interacción.
+
+Utiliza console.log() para verificar que los datos llegan correctamente antes de mostrarlos en pantalla.
+
+
+
+Ejemplo de salida esperada
+1. Lista de personajes (primeros 10):
+
+ID: 1 - Nombre: Rick Sanchez - Especie: Human
+ID: 2 - Nombre: Morty Smith - Especie: Human
+ID: 3 - Nombre: Summer Smith - Especie: Human
+ID: 4 - Nombre: Beth Smith - Especie: Human
+ID: 5 - Nombre: Jerry Smith - Especie: Human
+ID: 6 - Nombre: Abadango Cluster Princess - Especie: Alien
+ID: 7 - Nombre: Abradolf Lincler - Especie: Human
+ID: 8 - Nombre: Adjudicator Rick - Especie: Human
+ID: 9 - Nombre: Agency Director - Especie: Human
+ID: 10 - Nombre: Alan Rails - Especie: Human
+2. Agrupación por especie (ejemplo ordenado):
+
+Alien
+ - Abadango Cluster Princess (ID: 6)
+
+Human
+ - Rick Sanchez (ID: 1)
+ - Morty Smith (ID: 2)
+ - Summer Smith (ID: 3)
+ - Beth Smith (ID: 4)
+ - Jerry Smith (ID: 5)
+ - Abradolf Lincler (ID: 7)
+ - Adjudicator Rick (ID: 8)
+ - Agency Director (ID: 9)
+ - Alan Rails (ID: 10)
+3. Ficha de personaje (ejemplo con Rick Sanchez):
+
+ID: 1
+Nombre: Rick Sanchez
+Especie: Human
+Imagen: [se muestra la foto del personaje]
+(En la página, la ficha se puede mostrar como una tarjeta con el nombre, especie e imagen).
+
+
+Forma de Entrega
+Sube un archivo comprimido (.zip) que contenga:
+
+El código fuente de la aplicación (HTML, CSS y JS).
+
+Evidencias (pantallazos) de la aplicación funcionando.
+

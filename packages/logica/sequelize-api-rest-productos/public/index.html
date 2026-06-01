@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sequelize API REST</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Sequelize + REST</p>
+        <h1>Productos</h1>
+      </div>
+      <button id="refreshButton" type="button">Recargar</button>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Crear producto</h2>
+        <form id="createForm" class="form">
+          <label>
+            Nombre
+            <input name="nombre" placeholder="Audifonos USB" required />
+          </label>
+          <label>
+            Precio
+            <input name="precio" type="number" min="0" step="1" placeholder="19990" required />
+          </label>
+          <label>
+            Stock
+            <input name="stock" type="number" min="0" step="1" placeholder="10" required />
+          </label>
+          <button type="submit">Crear</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Editar producto</h2>
+        <form id="updateForm" class="form">
+          <label>
+            ID
+            <input name="id" type="number" min="1" required />
+          </label>
+          <label>
+            Nombre
+            <input name="nombre" placeholder="Nuevo nombre" />
+          </label>
+          <label>
+            Precio
+            <input name="precio" type="number" min="0" step="1" />
+          </label>
+          <label>
+            Stock
+            <input name="stock" type="number" min="0" step="1" />
+          </label>
+          <button type="submit">Actualizar</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Eliminar producto</h2>
+        <form id="deleteForm" class="form">
+          <label>
+            ID
+            <input name="id" type="number" min="1" required />
+          </label>
+          <button class="danger" type="submit">Eliminar</button>
+        </form>
+      </section>
+
+      <section class="panel results">
+        <h2>Listado</h2>
+        <p id="message" class="message"></p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Stock</th>
+              </tr>
+            </thead>
+            <tbody id="productTable"></tbody>
+          </table>
+        </div>
+        <h3>Respuesta API</h3>
+        <pre id="jsonBox">{}</pre>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banco Archivos y JSON</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231f6a53'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='28' font-weight='700' fill='%23fffdf9'%3EBJ%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">BJ</div>
+        <div>
+          <p class="brand-kicker">Node + JSON</p>
+          <h1>Banco Central de Clientes</h1>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Navegacion principal">
+        <button class="nav-link active" type="button" data-section="inicio">
+          <span class="nav-link-title">Inicio</span>
+          <span class="nav-link-copy">Resumen y accesos directos</span>
+        </button>
+        <button class="nav-link" type="button" data-section="consultar">
+          <span class="nav-link-title">Consultar</span>
+          <span class="nav-link-copy">Listados y filtros operativos</span>
+        </button>
+        <button class="nav-link" type="button" data-section="crear">
+          <span class="nav-link-title">Crear cliente</span>
+          <span class="nav-link-copy">Alta con cuenta RUT o ahorro</span>
+        </button>
+        <button class="nav-link" type="button" data-section="cuentas">
+          <span class="nav-link-title">Agregar cuentas</span>
+          <span class="nav-link-copy">Extender clientes existentes</span>
+        </button>
+        <button class="nav-link" type="button" data-section="eliminar">
+          <span class="nav-link-title">Eliminar</span>
+          <span class="nav-link-copy">Borrado seguro con reglas de negocio</span>
+        </button>
+      </nav>
+
+      <section class="sidebar-note">
+        <p class="sidebar-note-label">Estado del sistema</p>
+        <p class="sidebar-note-copy">
+          Panel interno para ejecutivos. La persistencia se mantiene en archivo JSON y las reglas del negocio siguen activas en backend.
+        </p>
+      </section>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <main class="workspace">
+      <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="topbar-copy">
+          <p class="topbar-kicker">App administrativa</p>
+          <h2>Gestion de clientes y cuentas bancarias</h2>
+        </div>
+
+        <div class="topbar-status">
+          <span class="status-dot"></span>
+          <span>Persistencia en JSON activa</span>
+        </div>
+      </header>
+
+      <section class="dashboard" id="section-inicio" data-section-panel="inicio">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Inicio</p>
+            <h2>Dashboard operativo</h2>
+          </div>
+          <button class="ghost-button" id="refresh-summary" type="button">Actualizar resumen</button>
+        </div>
+
+        <div class="dashboard-intro">
+          <div>
+            <p class="eyebrow">Vista ejecutiva</p>
+            <h3>Selecciona una tarjeta para ir directo al detalle en Consultar.</h3>
+          </div>
+          <img src="./bank-panel.svg" alt="Panel bancario" class="dashboard-image" />
+        </div>
+
+        <div class="stats-grid">
+          <button class="stat-card stat-card-button" type="button" data-summary-view="total-cuentas">
+            <p class="stat-label">Cuentas totales</p>
+            <strong class="stat-value" id="total-accounts">--</strong>
+            <span class="stat-copy">Suma de cuentas RUT y cuentas ahorro.</span>
+          </button>
+          <button class="stat-card stat-card-button" type="button" data-summary-view="solo-rut">
+            <p class="stat-label">Cuenta unica RUT</p>
+            <strong class="stat-value" id="only-rut-clients">--</strong>
+            <span class="stat-copy">Clientes con RUT y sin ahorro.</span>
+          </button>
+          <button class="stat-card stat-card-button" type="button" data-summary-view="solo-ahorro">
+            <p class="stat-label">Cuenta unica ahorro</p>
+            <strong class="stat-value" id="only-savings-clients">--</strong>
+            <span class="stat-copy">Clientes sin RUT y con ahorro.</span>
+          </button>
+          <button class="stat-card stat-card-button" type="button" data-summary-view="rut-ahorro">
+            <p class="stat-label">RUT + ahorro</p>
+            <strong class="stat-value" id="rut-and-savings-clients">--</strong>
+            <span class="stat-copy">Clientes que tienen ambos productos.</span>
+          </button>
+          <button class="stat-card stat-card-button" type="button" data-summary-view="total-clientes">
+            <p class="stat-label">Total clientes</p>
+            <strong class="stat-value" id="total-clients">--</strong>
+            <span class="stat-copy">Vista completa de la cartera actual.</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="content-section hidden" id="section-consultar" data-section-panel="consultar">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Consultar</p>
+            <h2>Listados operativos</h2>
+          </div>
+        </div>
+
+        <div class="consult-banner" id="consult-banner">
+          Selecciona un listado o entra desde una tarjeta del dashboard para ver el detalle.
+        </div>
+
+        <div class="panel-grid two-columns">
+          <article class="action-card">
+            <div class="action-card-head">
+              <h3>Todos los clientes</h3>
+              <p>Incluye cuenta RUT y cuentas de ahorro por cada cliente.</p>
+            </div>
+            <button id="load-all" type="button">Listar todos los clientes</button>
+          </article>
+
+          <article class="action-card">
+            <div class="action-card-head">
+              <h3>Clientes con cuenta RUT</h3>
+              <p>Filtra solo quienes ya tienen cuenta RUT registrada.</p>
+            </div>
+            <button id="load-rut" type="button">Listar clientes con cuenta RUT</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section hidden" id="section-crear" data-section-panel="crear">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Crear cliente</p>
+            <h2>Altas iniciales</h2>
+          </div>
+        </div>
+
+        <div class="panel-grid">
+          <form id="new-client-rut-form" class="form-card">
+            <div class="action-card-head">
+              <h3>Cliente nuevo con cuenta RUT</h3>
+              <p>Registra al cliente y abre de inmediato su cuenta principal.</p>
+            </div>
+            <label>
+              <span>Nombre del cliente</span>
+              <input id="rut-client-name" type="text" placeholder="Ej: Camila Rojas" required />
+            </label>
+            <label>
+              <span>Numero cuenta RUT</span>
+              <input id="rut-account-number" type="text" placeholder="Ej: 12345678-9" required />
+            </label>
+            <label>
+              <span>Saldo inicial</span>
+              <input id="rut-account-balance" type="number" min="0" placeholder="0" required />
+            </label>
+            <button type="submit">Agregar cliente + cuenta RUT</button>
+          </form>
+
+          <form id="new-client-savings-form" class="form-card">
+            <div class="action-card-head">
+              <h3>Cliente nuevo con cuenta ahorro</h3>
+              <p>Crea el cliente con una cuenta de ahorro inicial.</p>
+            </div>
+            <label>
+              <span>Nombre del cliente</span>
+              <input id="savings-client-name" type="text" placeholder="Ej: Diego Perez" required />
+            </label>
+            <label>
+              <span>Numero cuenta ahorro</span>
+              <input id="savings-account-number" type="text" placeholder="Ej: AH-9001" required />
+            </label>
+            <label>
+              <span>Saldo inicial</span>
+              <input id="savings-account-balance" type="number" min="0" placeholder="0" required />
+            </label>
+            <button type="submit">Agregar cliente + ahorro</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="content-section hidden" id="section-cuentas" data-section-panel="cuentas">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Agregar cuentas</p>
+            <h2>Clientes existentes</h2>
+          </div>
+        </div>
+
+        <div class="panel-grid">
+          <form id="add-rut-form" class="form-card">
+            <div class="action-card-head">
+              <h3>Agregar cuenta RUT</h3>
+              <p>Usa el ID del cliente existente para registrar su cuenta principal.</p>
+            </div>
+            <label>
+              <span>ID cliente</span>
+              <input id="existing-rut-client-id" type="number" min="1" placeholder="Ej: 4" required />
+            </label>
+            <label>
+              <span>Numero cuenta RUT</span>
+              <input id="existing-rut-number" type="text" placeholder="Ej: 22222222-2" required />
+            </label>
+            <label>
+              <span>Saldo inicial</span>
+              <input id="existing-rut-balance" type="number" min="0" placeholder="0" required />
+            </label>
+            <button type="submit">Agregar cuenta RUT</button>
+          </form>
+
+          <form id="add-savings-form" class="form-card">
+            <div class="action-card-head">
+              <h3>Agregar cuenta ahorro</h3>
+              <p>Asocia una nueva cuenta de ahorro al cliente ya registrado.</p>
+            </div>
+            <label>
+              <span>ID cliente</span>
+              <input id="existing-savings-client-id" type="number" min="1" placeholder="Ej: 4" required />
+            </label>
+            <label>
+              <span>Numero cuenta ahorro</span>
+              <input id="existing-savings-number" type="text" placeholder="Ej: AH-9900" required />
+            </label>
+            <label>
+              <span>Saldo inicial</span>
+              <input id="existing-savings-balance" type="number" min="0" placeholder="0" required />
+            </label>
+            <button type="submit">Agregar cuenta ahorro</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="content-section hidden" id="section-eliminar" data-section-panel="eliminar">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Eliminar</p>
+            <h2>Acciones de control</h2>
+          </div>
+        </div>
+
+        <div class="panel-grid">
+          <form id="delete-client-form" class="form-card danger-card">
+            <div class="action-card-head">
+              <h3>Eliminar cliente completo</h3>
+              <p>Borra la ficha del cliente y todas sus cuentas asociadas.</p>
+            </div>
+            <label>
+              <span>ID cliente</span>
+              <input id="delete-client-id" type="number" min="1" placeholder="Ej: 5" required />
+            </label>
+            <button type="submit">Eliminar cliente</button>
+          </form>
+
+          <form id="delete-rut-form" class="form-card danger-card">
+            <div class="action-card-head">
+              <h3>Eliminar cuenta RUT</h3>
+              <p>Solo se permite si el cliente mantiene al menos una cuenta ahorro.</p>
+            </div>
+            <label>
+              <span>ID cliente</span>
+              <input id="delete-rut-client-id" type="number" min="1" placeholder="Ej: 2" required />
+            </label>
+            <button type="submit">Eliminar cuenta RUT</button>
+          </form>
+
+          <form id="delete-savings-form" class="form-card danger-card">
+            <div class="action-card-head">
+              <h3>Eliminar cuenta ahorro</h3>
+              <p>Debes indicar el ID del cliente y el numero exacto de la cuenta.</p>
+            </div>
+            <label>
+              <span>ID cliente</span>
+              <input id="delete-savings-client-id" type="number" min="1" placeholder="Ej: 3" required />
+            </label>
+            <label>
+              <span>Numero cuenta ahorro</span>
+              <input id="delete-savings-number" type="text" placeholder="Ej: AH-1002" required />
+            </label>
+            <button type="submit">Eliminar cuenta ahorro</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="result-panel">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Resultado</p>
+            <h2>Salida de la operacion</h2>
+          </div>
+          <p id="status">Selecciona una accion para consultar o modificar el archivo JSON.</p>
+        </div>
+        <div id="result" class="result"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

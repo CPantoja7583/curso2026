@@ -1,0 +1,9 @@
+{
+  "name": "servidor-node-basico",
+  "version": "1.0.0",
+  "description": "Servidor web basico con Node.js para fecha/hora y respuestas aleatorias",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

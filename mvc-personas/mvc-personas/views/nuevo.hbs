@@ -1,0 +1,24 @@
+<h1>Nueva persona</h1>
+
+{{#if error}}
+  <div class="alerta">{{error}}</div>
+{{/if}}
+
+<form method="POST" action="/personas" class="formulario">
+  <label>
+    Nombres
+    <input type="text" name="nombres" required>
+  </label>
+
+  <label>
+    Apellidos
+    <input type="text" name="apellidos" required>
+  </label>
+
+  <label>
+    Edad
+    <input type="number" name="edad" min="1">
+  </label>
+
+  <button type="submit" class="boton">Guardar</button>
+</form>

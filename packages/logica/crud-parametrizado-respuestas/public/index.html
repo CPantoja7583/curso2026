@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD parametrizado</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Node + pg</p>
+        <h1>CRUD parametrizado</h1>
+      </div>
+      <button id="listAllButton" type="button">Listar todos</button>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Crear cliente</h2>
+        <form id="createForm" class="form">
+          <label>
+            RUT
+            <input name="rut" type="text" placeholder="55.555.555-5" required />
+          </label>
+          <label>
+            Nombre
+            <input name="nombre" type="text" placeholder="Elena Castro" required />
+          </label>
+          <label>
+            Edad
+            <input name="edad" type="number" min="0" step="1" placeholder="30" required />
+          </label>
+          <button type="submit">Crear</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Consultar</h2>
+        <form id="searchForm" class="form">
+          <label>
+            Criterio
+            <select name="criterio">
+              <option value="">Todos</option>
+              <option value="rut">RUT</option>
+              <option value="nombre">Nombre o prefijo</option>
+              <option value="edad">Edad exacta</option>
+            </select>
+          </label>
+          <label>
+            Valor
+            <input name="valor" type="text" placeholder="Ana, 31 o 11.111.111-1" />
+          </label>
+          <button type="submit">Buscar</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Modificar nombre</h2>
+        <form id="updateForm" class="form">
+          <label>
+            RUT
+            <input name="rut" type="text" placeholder="22.222.222-2" required />
+          </label>
+          <label>
+            Nuevo nombre
+            <input name="nombre" type="text" placeholder="Luis Soto actualizado" required />
+          </label>
+          <button type="submit">Actualizar</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Eliminar</h2>
+        <form id="deleteForm" class="form">
+          <label>
+            Criterio
+            <select name="criterio" required>
+              <option value="rut">RUT</option>
+              <option value="nombre">Nombre o prefijo</option>
+              <option value="edad">Edad exacta</option>
+            </select>
+          </label>
+          <label>
+            Valor
+            <input name="valor" type="text" placeholder="33.333.333-3" required />
+          </label>
+          <button class="danger" type="submit">Eliminar</button>
+        </form>
+      </section>
+
+      <section class="panel results">
+        <div class="results-header">
+          <div>
+            <h2>Resultados</h2>
+            <p id="message" class="message">Carga inicial pendiente.</p>
+          </div>
+          <p id="rowCount" class="row-count"></p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>RUT</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <tr>
+                <td colspan="3">Sin datos.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Respuesta JSON</h3>
+        <pre id="jsonBox">{}</pre>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

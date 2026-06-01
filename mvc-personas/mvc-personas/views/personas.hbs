@@ -1,0 +1,28 @@
+<h1>Lista de personas</h1>
+
+{{#if personas.length}}
+  <table class="tabla">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each personas}}
+        <tr>
+          <td>{{id}}</td>
+          <td>{{nombres}}</td>
+          <td>{{apellidos}}</td>
+          <td>{{edad}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{else}}
+    <p>No hay personas registradas todavía.</p>
+  {{/if}}
+
+<a href="/personas/nuevo" class="boton">+ Agregar persona</a>

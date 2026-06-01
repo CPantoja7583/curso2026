@@ -1,0 +1,2 @@
+[   33185ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4310/clientes:0
+[   37431ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4310/clientes:0

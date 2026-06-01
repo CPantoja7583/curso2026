@@ -1,0 +1,9 @@
+{
+  "name": "servidor-json-netflix-clases",
+  "version": "1.0.0",
+  "description": "Servidor web en Node con clases Pelicula y Serie",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

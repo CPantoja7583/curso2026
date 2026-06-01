@@ -1,0 +1,29 @@
+Ejercicio Práctico - API con Express + SQL: Conductores y Automóviles
+Actividad Práctica : API con Express + SQL: Conductores y Automóviles
+Introducción / Objetivo
+
+Actividad breve para integrar Node.js + Express con una base de datos provista en un .sql adjunto, exponiendo endpoints REST que consulten y combinen información, y un frontend simple que consuma esos servicios. El foco es practicar rutas, consultas y retorno ordenado de datos.
+
+Descripción de la tarea
+
+Material: Descarga e importa el archivo actividad2.sql adjunto (contiene los datos/esquema necesarios).
+
+PARTE 1 — Backend (Express): Implementa un servidor web que responda a lo siguiente:
+
+GET /conductores: retorna la lista de todos los conductores.
+GET /automóviles: retorna la lista de todos los automóviles.
+GET /conductoressinauto?edad=<numero>: retorna conductores menores de <numero> años que no tienen automóvil.
+GET /solitos: retorna la lista de conductores sin automóvil y automóviles sin conductor.
+GET /auto?patente=<string>: retorna el automóvil con patente <string> y los datos de su conductor (si existe).
+GET /auto?iniciopatente=<letra>: retorna los automóviles cuya patente comienza con <letra> y los datos de su conductor (si existe).
+PARTE 2 — Frontend: Programa un cliente que consuma el servidor de la Parte 1 y muestre ordenadamente la información obtenida en cada GET (listas y/o tarjetas/tablas).
+
+Sugerencia mínima (opcional): Responde en JSON y usa códigos HTTP apropiados (200/404). Si tu frontend corre en otro puerto, habilita CORS de forma acotada. Lee el puerto desde variable de entorno.
+
+Forma de entrega
+
+Sube un .zip con:
+
+Backend (código de Express) y Frontend (HTML/CSS/JS).
+Un README corto con pasos para correr el servidor y el cliente.
+Evidencias: pantallazos de cada endpoint funcionando (desde el frontend o cliente HTTP).

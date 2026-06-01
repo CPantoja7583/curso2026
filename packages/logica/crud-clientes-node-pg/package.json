@@ -1,0 +1,14 @@
+{
+  "name": "crud-clientes-node-pg",
+  "version": "1.0.0",
+  "description": "Actividad de consultas parametrizadas con Node y pg: CRUD de clientes.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {}
+}

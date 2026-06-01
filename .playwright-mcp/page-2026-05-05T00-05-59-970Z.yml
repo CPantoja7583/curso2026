@@ -1,0 +1,20 @@
+- main [ref=e2]:
+  - heading "Package Logica" [level=1] [ref=e3]
+  - paragraph [ref=e4]: Ejercicios y proyectos HTML, CSS y JavaScript del curso.
+  - generic [ref=e5]:
+    - link "Curso Actividad base con estructura de assets." [ref=e6] [cursor=pointer]:
+      - /url: ./Curso/index.html
+      - strong [ref=e7]: Curso
+      - paragraph [ref=e8]: Actividad base con estructura de assets.
+    - link "EP2 Ejercicios practicos y entregas del modulo." [ref=e9] [cursor=pointer]:
+      - /url: ./EP2/index.html
+      - strong [ref=e10]: EP2
+      - paragraph [ref=e11]: Ejercicios practicos y entregas del modulo.
+    - link "Portafolio Portafolio personal del curso." [ref=e12] [cursor=pointer]:
+      - /url: ./Portafolio/index.html
+      - strong [ref=e13]: Portafolio
+      - paragraph [ref=e14]: Portafolio personal del curso.
+    - link "Actividad 4 Actividad independiente con HTML, CSS y JS." [ref=e15] [cursor=pointer]:
+      - /url: ./actividad4/actividad4.html
+      - strong [ref=e16]: Actividad 4
+      - paragraph [ref=e17]: Actividad independiente con HTML, CSS y JS.

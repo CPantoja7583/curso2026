@@ -1,0 +1,26 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "Menu" [ref=e3] [cursor=pointer]:
+      - /url: index.html
+    - heading "Ordenes por cliente" [level=1] [ref=e4]
+  - main [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - text: RUT cliente
+        - textbox "RUT cliente" [ref=e8]: 11.111.111-1
+      - button "Consultar" [ref=e9] [cursor=pointer]
+    - paragraph [ref=e10]: "Ordenes encontradas: 1."
+    - table [ref=e12]:
+      - rowgroup [ref=e13]:
+        - row "ID orden Cliente Total Fecha" [ref=e14]:
+          - columnheader "ID orden" [ref=e15]
+          - columnheader "Cliente" [ref=e16]
+          - columnheader "Total" [ref=e17]
+          - columnheader "Fecha" [ref=e18]
+      - rowgroup [ref=e19]:
+        - row "7 Ana Perez $59.000 26-05-2026, 9:00:00 p. m." [ref=e20]:
+          - cell "7" [ref=e21]
+          - cell "Ana Perez" [ref=e22]
+          - cell "$59.000" [ref=e23]
+          - cell "26-05-2026, 9:00:00 p. m." [ref=e24]
+    - generic [ref=e25]: "{ \"ok\": true, \"data\": [ { \"id_orden\": 7, \"rut_cliente\": \"11.111.111-1\", \"cliente\": \"Ana Perez\", \"total\": 59000, \"created_at\": \"2026-05-27T01:00:00.000Z\" } ] }"

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ordenes por RUT</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="index.html">Menu</a>
+      <h1>Ordenes por cliente</h1>
+    </header>
+    <main class="panel">
+      <form id="ordersForm" class="form inline">
+        <label>
+          RUT cliente
+          <input name="rut" value="11.111.111-1" required />
+        </label>
+        <button>Consultar</button>
+      </form>
+      <p id="message" class="message"></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID orden</th>
+              <th>Cliente</th>
+              <th>Total</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="ordersBody"></tbody>
+        </table>
+      </div>
+      <pre id="jsonBox">{}</pre>
+    </main>
+    <script src="ordenes.js"></script>
+  </body>
+</html>

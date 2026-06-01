@@ -1,0 +1,13 @@
+{
+  "name": "consultas-parametrizadas-node-pg",
+  "version": "1.0.0",
+  "description": "Consultas parametrizadas II con Node y pg",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  }
+}

@@ -1,0 +1,73 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - paragraph [ref=e4]: Sequelize + REST
+      - heading "Productos" [level=1] [ref=e5]
+    - button "Recargar" [ref=e6] [cursor=pointer]
+  - main [ref=e7]:
+    - generic [ref=e8]:
+      - heading "Crear producto" [level=2] [ref=e9]
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - text: Nombre
+          - textbox "Nombre" [ref=e12]:
+            - /placeholder: Audifonos USB
+        - generic [ref=e13]:
+          - text: Precio
+          - spinbutton "Precio" [ref=e14]
+        - generic [ref=e15]:
+          - text: Stock
+          - spinbutton "Stock" [ref=e16]
+        - button "Crear" [active] [ref=e17] [cursor=pointer]
+    - generic [ref=e18]:
+      - heading "Editar producto" [level=2] [ref=e19]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - text: ID
+          - spinbutton "ID" [ref=e22]
+        - generic [ref=e23]:
+          - text: Nombre
+          - textbox "Nombre" [ref=e24]:
+            - /placeholder: Nuevo nombre
+        - generic [ref=e25]:
+          - text: Precio
+          - spinbutton "Precio" [ref=e26]
+        - generic [ref=e27]:
+          - text: Stock
+          - spinbutton "Stock" [ref=e28]
+        - button "Actualizar" [ref=e29] [cursor=pointer]
+    - generic [ref=e30]:
+      - heading "Eliminar producto" [level=2] [ref=e31]
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - text: ID
+          - spinbutton "ID" [ref=e34]
+        - button "Eliminar" [ref=e35] [cursor=pointer]
+    - generic [ref=e36]:
+      - heading "Listado" [level=2] [ref=e37]
+      - paragraph [ref=e38]: "Productos cargados: 3."
+      - table [ref=e40]:
+        - rowgroup [ref=e41]:
+          - row "ID Nombre Precio Stock" [ref=e42]:
+            - columnheader "ID" [ref=e43]
+            - columnheader "Nombre" [ref=e44]
+            - columnheader "Precio" [ref=e45]
+            - columnheader "Stock" [ref=e46]
+        - rowgroup [ref=e47]:
+          - row "1 Teclado mecanico $35.000 8" [ref=e65]:
+            - cell "1" [ref=e66]
+            - cell "Teclado mecanico" [ref=e67]
+            - cell "$35.000" [ref=e68]
+            - cell "8" [ref=e69]
+          - row "2 Mouse optico $12.000 15" [ref=e70]:
+            - cell "2" [ref=e71]
+            - cell "Mouse optico" [ref=e72]
+            - cell "$12.000" [ref=e73]
+            - cell "15" [ref=e74]
+          - row "3 Monitor 24 pulgadas $140.000 4" [ref=e75]:
+            - cell "3" [ref=e76]
+            - cell "Monitor 24 pulgadas" [ref=e77]
+            - cell "$140.000" [ref=e78]
+            - cell "4" [ref=e79]
+      - heading "Respuesta API" [level=3] [ref=e63]
+      - generic [ref=e64]: "{ \"status\": 200, \"ok\": true, \"data\": [ { \"id\": 1, \"nombre\": \"Teclado mecanico\", \"precio\": 35000, \"stock\": 8 }, { \"id\": 2, \"nombre\": \"Mouse optico\", \"precio\": 12000, \"stock\": 15 }, { \"id\": 3, \"nombre\": \"Monitor 24 pulgadas\", \"precio\": 140000, \"stock\": 4 } ] }"

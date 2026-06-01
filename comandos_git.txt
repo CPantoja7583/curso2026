@@ -1,0 +1,43 @@
+Ejercicio Práctico - Git y Github
+
+Proyecto:
+C:\Users\Asus\Desktop\Adicionales\Cursos\JavaScript
+
+Verificación realizada:
+- Git instalado: git version 2.54.0.windows.1
+- Repositorio inicializado: si
+
+1. git --version
+Definición breve:
+Muestra la versión de Git instalada en el equipo.
+Ejemplo de uso:
+git --version
+
+2. git init
+Definición breve:
+Inicializa un repositorio Git en la carpeta actual para comenzar a controlar versiones.
+Ejemplo de uso:
+git init
+
+3. git add
+Definición breve:
+Agrega archivos o cambios al área de preparación (staging) antes de crear un commit.
+Ejemplo de uso:
+git add .
+
+4. git commit
+Definición breve:
+Guarda de forma permanente los cambios preparados en el historial del repositorio con un mensaje descriptivo.
+Ejemplo de uso:
+git commit -m "Primer commit"
+
+5. git status
+Definición breve:
+Muestra el estado actual del repositorio, incluyendo archivos modificados, preparados o no rastreados.
+Ejemplo de uso:
+git status
+
+Flujo típico de trabajo:
+git add .
+git commit -m "mensaje"
+git status

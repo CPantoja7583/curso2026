@@ -1,0 +1,45 @@
+RETO (NO OBLIGATORIO) Ejercicio Práctico - Api Rest n°2
+Actividad Consumo de API REST con clase GhibliAPI
+En esta actividad aplicarás el consumo de API REST y la encapsulación en clases de JavaScript. El objetivo es obtener datos desde un endpoint público, procesarlos y exponer funcionalidades claras mediante métodos de clase y botones HTML, usando async/await de forma adecuada.
+1) API REST — Clase GhibliAPI
+Programa la clase GhibliAPI que encapsule el trabajo necesario para mostrar la información del endpoint visto en clases:
+https://ghibliapi.herokuapp.com/films
+La clase debe facilitar métodos para:
+Listar títulos y director de todas las películas (por consola).
+Listar título y año (release_date) de todas las películas.
+Pedir un año por prompt y mostrar todas las películas de ese año.
+Listar título y descripción de todas las películas.
+Listar el id de todas las películas.
+Declara como async los métodos que lo ameriten (p.ej., los que hacen fetch).
+2) Interfaz / Script de uso
+Desarrolla un script que utilice la clase GhibliAPI y disponibilice todos sus métodos mediante botones HTML (por ejemplo: “Títulos y Directores”, “Títulos y Año”, “Filtrar por Año”, “Títulos y Descripción”, “Listar IDs”).
+La salida puede mostrarse en consola y/o en un contenedor de la página (por ejemplo, un <pre id="salida">).
+Estructura base de la clase (sólo de referencia):
+class GhibliAPI {
+constructor(baseUrl = "https://ghibliapi.herokuapp.com/films") {
+this.baseUrl = baseUrl;
+this.cache = null; // opcional: cache local
+}
+async getFilms() {
+if (this.cache) return this.cache;
+const res = await fetch(this.baseUrl);
+if (!res.ok) throw new Error("Error al obtener films");
+const data = await res.json();
+this.cache = data; // opcional
+return data;
+}
+// agrega aquí tus métodos async:
+// listarTitulosYDirectores(), listarTitulosYAnio(), filtrarPorAnio(), listarTitulosYDescripcion(), listarIds()
+}
+Validación de año desde prompt:
+const anio = parseInt(prompt("Ingrese un año (YYYY):"), 10);
+if (Number.isNaN(anio)) { console.warn("Año inválido"); /* manejar */ }
+Filtrado y mapeo:
+const peliculas = await api.getFilms();
+const deEseAnio = peliculas.filter(p => parseInt(p.release_date, 10) === anio);
+Salida legible:
+Consola: console.table() para listas tabulares.
+HTML: usar <ul>, <table> o <pre> para texto formateado.
+Control de errores (general):
+try { /* await ... */ } catch (e) { console.error(e.message); }
+Mantén el código simple y alineado a lo visto en clases; no es necesario usar librerías adicionales.
