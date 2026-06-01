@@ -1,0 +1,17 @@
+{
+  "name": "evaluacion-final-modulo-7-paises",
+  "version": "1.0.0",
+  "description": "Evaluacion final modulo 7: paises con pg, pg-cursor, transacciones y frontend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "pg": "^8.16.3",
+    "pg-cursor": "^2.15.3"
+  },
+  "devDependencies": {}
+}

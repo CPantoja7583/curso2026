@@ -1,0 +1,184 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #1f2933;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.topbar {
+  align-items: center;
+  background: #1f3d5a;
+  color: #ffffff;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1.4rem clamp(1rem, 4vw, 3rem);
+}
+
+.eyebrow {
+  color: #add7ff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0 0 0.25rem;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+h3 {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.controls {
+  align-items: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 1rem clamp(1rem, 4vw, 3rem) 2rem;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d7e0ea;
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(31, 61, 90, 0.08);
+  padding: 1rem;
+}
+
+.results {
+  grid-column: 1 / -1;
+}
+
+.form {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+label {
+  color: #334155;
+  display: grid;
+  font-size: 0.9rem;
+  font-weight: 700;
+  gap: 0.35rem;
+}
+
+input,
+select {
+  border: 1px solid #b9c5d3;
+  border-radius: 6px;
+  min-height: 2.5rem;
+  padding: 0.6rem 0.7rem;
+  width: 100%;
+}
+
+button {
+  background: #0f766e;
+  border: 0;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  min-height: 2.5rem;
+  padding: 0.65rem 1rem;
+}
+
+button:hover {
+  background: #115e59;
+}
+
+button.danger {
+  background: #b42318;
+}
+
+.message {
+  color: #64748b;
+  margin-top: 1rem;
+}
+
+.message[data-type="success"] {
+  color: #047857;
+}
+
+.message[data-type="error"] {
+  color: #b42318;
+}
+
+.table-wrap {
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 700px;
+  width: 100%;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e5eaf0;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background: #ecf4fb;
+  color: #1f3d5a;
+}
+
+pre {
+  background: #17212b;
+  border-radius: 8px;
+  color: #e6edf3;
+  overflow-x: auto;
+  padding: 1rem;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

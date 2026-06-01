@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JWT en Express</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <p class="eyebrow">Modulo 7</p>
+      <h1>Autenticacion con JWT</h1>
+      <p class="subtitle">Login, ruta protegida y acceso denegado en una sola interfaz.</p>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Login</h2>
+        <form id="loginForm" class="form">
+          <label>
+            Email
+            <input name="email" type="email" value="demo@mail.com" autocomplete="email" required />
+          </label>
+          <label>
+            Password
+            <input name="password" type="password" value="123456" autocomplete="current-password" required />
+          </label>
+          <button type="submit">Ingresar</button>
+        </form>
+
+        <h2>Registro</h2>
+        <form id="registerForm" class="form">
+          <label>
+            Email
+            <input name="email" type="email" placeholder="nuevo@mail.com" autocomplete="email" required />
+          </label>
+          <label>
+            Password
+            <input name="password" type="password" placeholder="123456" autocomplete="new-password" required />
+          </label>
+          <button type="submit">Registrar</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Perfil protegido</h2>
+            <p id="status" class="status">Aun no hay sesion activa.</p>
+          </div>
+          <button id="logoutButton" class="secondary" type="button">Cerrar sesion</button>
+        </div>
+        <div class="actions">
+          <button id="profileButton" type="button">Ver perfil</button>
+          <button id="deniedButton" class="secondary" type="button">Probar sin token</button>
+        </div>
+        <div id="profileCard" class="profile-card">
+          <strong>Email</strong>
+          <span id="profileEmail">-</span>
+          <strong>Rol</strong>
+          <span id="profileRole">-</span>
+        </div>
+      </section>
+
+      <section class="panel full">
+        <h2>Respuesta del backend</h2>
+        <pre id="jsonBox">{}</pre>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

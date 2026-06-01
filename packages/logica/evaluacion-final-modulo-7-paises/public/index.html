@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paises y PIB</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Modulo 7</p>
+        <h1>Paises y PIB</h1>
+      </div>
+      <div class="controls">
+        <label>
+          Bloque
+          <select id="limitSelect">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+          </select>
+        </label>
+        <button id="loadButton" type="button">Cargar lista</button>
+        <button id="nextButton" type="button">Siguiente</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Agregar pais</h2>
+        <form id="createForm" class="form">
+          <label>Nombre<input name="nombre" required /></label>
+          <label>Continente<input name="continente" required /></label>
+          <label>Poblacion<input name="poblacion" type="number" min="0" required /></label>
+          <label>PIB 2019<input name="pib_2019" type="number" min="0" required /></label>
+          <label>PIB 2020<input name="pib_2020" type="number" min="0" required /></label>
+          <button type="submit">Agregar</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Eliminar pais</h2>
+        <form id="deleteForm" class="form">
+          <label>Nombre<input name="nombre" required /></label>
+          <button class="danger" type="submit">Eliminar</button>
+        </form>
+      </section>
+
+      <section class="panel results">
+        <h2>Listado por cursor</h2>
+        <p id="message" class="message">Selecciona un bloque y carga la lista.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Pais</th>
+                <th>Continente</th>
+                <th>Poblacion</th>
+                <th>PIB 2019</th>
+                <th>PIB 2020</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <tr><td colspan="5">Sin datos cargados.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Respuesta JSON</h3>
+        <pre id="jsonBox">{}</pre>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

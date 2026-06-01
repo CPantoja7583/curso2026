@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "titulo": "Cien anos de soledad",
+    "autor": "Gabriel Garcia Marquez",
+    "anio": 1967
+  },
+  {
+    "id": 2,
+    "titulo": "1984",
+    "autor": "George Orwell",
+    "anio": 1949
+  }
+]

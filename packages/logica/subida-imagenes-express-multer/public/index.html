@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subida de Imagenes</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="app-shell">
+  <main class="container py-5">
+    <section class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="card shadow-sm border-0 app-card">
+          <div class="card-body p-4 p-lg-5">
+            <span class="badge text-bg-primary mb-3">Express + Multer</span>
+            <h1 class="h2 mb-3">Subir imagen</h1>
+            <p class="text-secondary mb-4">
+              Selecciona una imagen valida en formato JPG, JPEG, PNG o GIF. El tamano maximo permitido es 5 MB.
+            </p>
+
+            <form id="formUpload" class="row g-3" novalidate>
+              <div class="col-12">
+                <label for="inputFoto" class="form-label">Imagen</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="inputFoto"
+                  name="foto"
+                  accept="image/*"
+                  required
+                  aria-describedby="ayudaArchivo"
+                />
+                <div id="ayudaArchivo" class="form-text">
+                  La validacion final ocurre en el servidor aunque el navegador limite la seleccion.
+                </div>
+              </div>
+
+              <div class="col-12 d-flex flex-wrap gap-3 align-items-center">
+                <button class="btn btn-primary px-4" type="submit">Subir imagen</button>
+                <span id="estadoCarga" class="text-secondary small" aria-live="polite"></span>
+              </div>
+            </form>
+
+            <div id="feedback" class="alert mt-4 d-none" role="alert" aria-live="polite"></div>
+
+            <div id="previewBox" class="preview-box mt-4 d-none">
+              <p class="fw-semibold mb-2">Vista previa del archivo subido</p>
+              <img id="previewImage" class="img-fluid rounded border" alt="Vista previa de la imagen subida" />
+              <p id="previewMeta" class="small text-secondary mt-2 mb-0"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

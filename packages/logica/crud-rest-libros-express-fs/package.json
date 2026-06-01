@@ -1,0 +1,17 @@
+{
+  "name": "crud-rest-libros-express-fs",
+  "version": "1.0.0",
+  "description": "CRUD REST con Express y File System para catalogo de libros",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
